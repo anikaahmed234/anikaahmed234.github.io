@@ -7,9 +7,10 @@
     <title>Sultana Anika Ahmed Nayona | SQA Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="site.css">
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.1/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   </head>
   <body data-theme="light">
     <div id="scroll-progress" aria-hidden="true"></div>
@@ -24,11 +25,16 @@
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
+          <a href="#skills">Expertise</a>
           <a href="#showcase">Showcase</a>
           <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </div>
+        <button class="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <button class="theme-toggle" aria-label="Toggle color theme">
           <span class="icon" data-icon-sun>☼</span>
           <span class="icon" data-icon-moon>☾</span>
@@ -47,22 +53,23 @@
             <p class="eyebrow">SQA Engineer &nbsp;·&nbsp; <span id="exp-duration">...</span> &nbsp;·&nbsp; Dhaka, Bangladesh</p>
             <h1 class="name-oneline">Sultana Anika Ahmed Nayona</h1>
             <p class="summary">
-              I don't just find bugs — I prevent them. A senior SQA engineer with <span id="bio-duration">4+ years</span>
-              of battle-tested experience across web, Android, iOS, and APIs. Automation is my craft,
+              I don't just find bugs — I prevent them. A senior SQA engineer with battle-tested experience across web, Android, iOS, and APIs. Automation is my craft,
               risk is what I map before anyone else sees it, and release confidence is what I deliver.
             </p>
             <div class="highlights-title">What I work with</div>
             <ul class="highlight-list">
-              <li>Automation: Playwright, Cypress, Selenium WebDriver, TestNG, Cucumber, Appium</li>
-              <li>API &amp; Performance: Postman, Newman, REST Assured, Apache JMeter</li>
-              <li>Languages &amp; Tools: Python, Java · Jira, Azure DevOps, Git/GitHub, MySQL</li>
+              <li>Manual Testing: Requirement analysis, test case design &amp; execution, bug tracking · Web, Android &amp; iOS</li>
+              <li>Automation: Selenium WebDriver, TestNG, Cypress, Cucumber, Appium</li>
+              <li>API &amp; Performance: Postman, Newman, REST Assured · Load testing with Apache JMeter</li>
+              <li>Languages &amp; Stack: Java, MySQL, HTML/CSS, Node.js · OOP, Git/GitHub, GitLab</li>
+              <li>Process &amp; Tools: Jira, ClickUp, Azure DevOps · Agile/Scrum, SDLC, STLC</li>
             </ul>
             <div class="hero-links">
-              <a href="mailto:anikanayona@gmail.com?subject=Hiring%20Sultana%20Anika%20Ahmed%20Nayona" class="text-link">Hire Me</a>
-              <a href="static/files/Sultana-Anika-Ahmed-Nayona-Resume.pdf" download class="text-link">Resume</a>
               <a href="https://www.linkedin.com/in/anikanayona/" target="_blank" rel="noopener" class="text-link">LinkedIn</a>
               <a href="https://github.com/anikaahmed234" target="_blank" rel="noopener" class="text-link">GitHub</a>
               <a href="https://www.hackerrank.com/anikanayona" target="_blank" rel="noopener" class="text-link">HackerRank</a>
+              <a href="https://leetcode.com/anikanayona/" target="_blank" rel="noopener" class="text-link">LeetCode</a>
+              <a href="CV_Sultana_Anika_Ahmed_Nayona.pdf" target="_blank" rel="noopener" class="text-link">Resume</a>
             </div>
           </div>
         </header>
@@ -86,7 +93,7 @@
             <div class="news-item">
               <div class="news-date">Feb 2022<br>Dec 2023</div>
               <div class="news-detail">
-                <p class="news-role"><strong>QA Section In-charge · Principal Officer</strong> &nbsp;—&nbsp; <a href="https://www.waltondigitech.com/" target="_blank" rel="noopener" class="company">Walton Hi-Tech Industries PLC</a></p>
+                <p class="news-role"><strong>QA Section In-charge · Principal Officer</strong> &nbsp;—&nbsp; <a href="https://www.waltonhil.com/" target="_blank" rel="noopener" class="company">Walton Hi-Tech Industries PLC</a></p>
                 <p>Led test case development and multi-platform testing; delivered web automation with Cypress; wrote API documentation; ran database validation with DBeaver and HeidiSQL; authored feature documentation that reduced onboarding time for new QA hires.</p>
               </div>
             </div>
@@ -119,12 +126,6 @@
                 <h3 class="edu-degree">B.Sc. Computer Science &amp; Engineering</h3>
                 <p class="edu-institution">Daffodil International University, Dhaka</p>
                 <p class="edu-desc">Core studies in software engineering, algorithms, data structures, databases, networking and OOP in Java — providing the technical foundation for systematic, evidence-based quality work.</p>
-                <div class="tag-row">
-                  <span class="tag">computer science</span>
-                  <span class="tag">java</span>
-                  <span class="tag">oop</span>
-                  <span class="tag">mysql</span>
-                </div>
               </div>
             </article>
 
@@ -137,10 +138,6 @@
                 <h3 class="edu-degree">H.S.C. — Science</h3>
                 <p class="edu-institution">Bir Shreshtha Noor Mohammad Public College</p>
                 <p class="edu-desc">Higher secondary studies in the Science stream with a perfect GPA, building strong analytical and problem-solving skills that carry directly into quality assurance work.</p>
-                <div class="tag-row">
-                  <span class="tag">science</span>
-                  <span class="tag">gpa 5.00</span>
-                </div>
               </div>
             </article>
 
@@ -151,7 +148,7 @@
         <section id="projects" class="section-block">
           <div class="section-heading">
             <span class="bar" aria-hidden="true"></span>
-            <h2>Selected Projects</h2>
+            <h2>Personal Projects</h2>
           </div>
 
           <div class="carousel" id="proj-carousel">
@@ -280,7 +277,7 @@
         <section id="skills" class="section-block">
           <div class="section-heading">
             <span class="bar" aria-hidden="true"></span>
-            <h2>QA Skills</h2>
+            <h2>Tech Expertise</h2>
           </div>
           <div class="expandable-grid">
 
@@ -455,6 +452,12 @@
             <span class="skill-bubble qa-mindset" style="--float-dur:3.7s;--float-delay:0.2s"><span class="skill-bubble-icon">🔎</span> Incident Analysis</span>
             <span class="skill-bubble qa-mindset" style="--float-dur:4.4s;--float-delay:1.0s"><span class="skill-bubble-icon">📊</span> Test Planning</span>
           </div>
+          <div class="skills-see-more-wrap">
+            <button class="skills-toggle-btn" id="skills-toggle-btn" aria-expanded="false">
+              <span class="toggle-label">See More</span>
+              <span class="toggle-chevron" aria-hidden="true">▾</span>
+            </button>
+          </div>
         </section>
 
         <!-- QA Showcase -->
@@ -489,6 +492,7 @@
             <span class="terminal-line cmd">$ <span class="terminal-cursor"></span></span>
           </div>
 
+          <!--
           <div class="counters-row">
             <div class="counter-chip">
               <div class="counter-num">500<span style="font-size:1.2rem">+</span></div>
@@ -507,6 +511,7 @@
               <div class="counter-label">Platforms Covered</div>
             </div>
           </div>
+          -->
 
           <div class="showcase-grid" style="margin-top:1.75rem;">
 
@@ -515,8 +520,8 @@
               <h3>Bugs I Found</h3>
               <p>Identified a critical race condition in a payment gateway where concurrent deposit + withdrawal requests caused double-debit on specific mobile networks. Caught in staging, preventing production data loss. Also found a silent API failure where expired JWT tokens returned HTTP 200 with empty data instead of 401 — invisible to all monitoring tools.</p>
               <div class="showcase-stats">
-                <span class="showcase-stat">300+ bugs reported</span>
-                <span class="showcase-stat">12 critical blockers</span>
+                <span class="showcase-stat">1,200+ bugs reported</span>
+                <span class="showcase-stat">45+ critical blockers</span>
               </div>
             </div>
 
@@ -525,7 +530,7 @@
               <h3>Testing Strategy</h3>
               <p>Built risk-based testing strategies that prioritise high-impact user journeys — auth, payments, and data integrity — while using exploratory testing for new features. Structured test pyramids with unit coverage owned by devs, API contracts validated with Postman, and E2E regression owned by QA.</p>
               <div class="showcase-stats">
-                <span class="showcase-stat">3-layer test pyramid</span>
+                <span class="showcase-stat">1,500+ test cases written</span>
                 <span class="showcase-stat">Risk-based coverage</span>
               </div>
             </div>
@@ -535,17 +540,17 @@
               <h3>Production Issues Prevented</h3>
               <p>Flagged a broken OTP flow on iOS 17 that passed all Android tests — caught because real device testing was part of the release checklist. Intercepted a DB migration that would have silently truncated phone number fields for international numbers, found during pre-release data validation.</p>
               <div class="showcase-stats">
-                <span class="showcase-stat">Zero P0 escapes in 2024</span>
-                <span class="showcase-stat">iOS + Android coverage</span>
+                <span class="showcase-stat">Zero P0 escapes (2+ yrs)</span>
+                <span class="showcase-stat">Web · iOS · Android</span>
               </div>
             </div>
 
             <div class="showcase-card reveal">
               <div class="showcase-icon">⚡</div>
               <h3>Performance Benchmarks</h3>
-              <p>Ran JMeter load tests simulating 500 concurrent users on the transaction API. Identified a bottleneck at the database connection pool (exhausted at 300 VUs) and collaborated with backend to tune limits — throughput improved 40% post-fix. Established baseline SLAs: P95 under 1s, P99 under 2s.</p>
+              <p>Ran JMeter load tests simulating 1,000 concurrent users on the transaction API. Identified a bottleneck at the database connection pool (exhausted at 600 VUs) and collaborated with backend to tune limits — throughput improved 40% post-fix. Established baseline SLAs: P95 under 1s, P99 under 2s.</p>
               <div class="showcase-stats">
-                <span class="showcase-stat">500 VU load tested</span>
+                <span class="showcase-stat">1,000 VU load tested</span>
                 <span class="showcase-stat">40% throughput gain</span>
               </div>
             </div>
@@ -553,10 +558,10 @@
             <div class="showcase-card reveal">
               <div class="showcase-icon">🤖</div>
               <h3>Automation Coverage</h3>
-              <p>Built Cypress and Playwright automation suites covering 80%+ of critical user flows. Integrated with CI/CD via GitHub Actions — suite runs on every PR, reports HTML results as artifacts, and blocks merges on failures. Reduced manual regression time from 2 days to under 30 minutes per release.</p>
+              <p>Built Cypress and Playwright automation suites covering 85%+ of critical user flows across 3 products. Integrated with CI/CD via GitHub Actions — suite runs on every PR, reports HTML results as artifacts, and blocks merges on failures. Reduced manual regression time from 3 days to under 45 minutes per release.</p>
               <div class="showcase-stats">
-                <span class="showcase-stat">80%+ critical flow coverage</span>
-                <span class="showcase-stat">CI/CD integrated</span>
+                <span class="showcase-stat">700+ automated tests</span>
+                <span class="showcase-stat">85%+ flow coverage</span>
               </div>
             </div>
 
@@ -565,8 +570,8 @@
               <h3>Lessons Learned</h3>
               <p>Emulators lie — real devices expose battery-saver mode, OEM overlays, and network interruptions that emulators mask. Never skip exploratory testing after automation passes: automation finds known bugs, exploration finds unknown ones. A defect found in dev costs 10× less than one found in production.</p>
               <div class="showcase-stats">
+                <span class="showcase-stat">5+ products QA'd end-to-end</span>
                 <span class="showcase-stat">Shift-left advocate</span>
-                <span class="showcase-stat">Real device first</span>
               </div>
             </div>
 
@@ -663,20 +668,48 @@
             <h2>Get in Touch</h2>
           </div>
           <div class="contact-card">
-            <p class="eyebrow">Open to SQA and test automation roles &nbsp;·&nbsp; Dhaka, Bangladesh</p>
-            <p class="contact-text"><span id="contact-duration">4+ years</span> of SQA across web, mobile, API and performance testing. Looking for a team where quality matters from day one.</p>
-            <div class="contact-details">
-              <span class="contact-item">📧 <a href="mailto:anikanayona@gmail.com">anikanayona@gmail.com</a></span>
-              <span class="contact-item">📞 <a href="tel:+8801631647072">+880 163 164 7072</a></span>
-              <span class="contact-item">📍 Dhaka, Bangladesh</span>
-            </div>
-            <div class="hero-links">
-              <a href="mailto:anikanayona@gmail.com?subject=Hiring%20Sultana%20Anika%20Ahmed%20Nayona" class="text-link">Email Me</a>
-              <a href="https://www.linkedin.com/in/anikanayona/" target="_blank" rel="noopener" class="text-link">LinkedIn</a>
-              <a href="https://github.com/anikaahmed234" target="_blank" rel="noopener" class="text-link">GitHub</a>
-              <a href="https://www.hackerrank.com/anikanayona" target="_blank" rel="noopener" class="text-link">HackerRank</a>
-              <a href="https://leetcode.com/anikanayona/" target="_blank" rel="noopener" class="text-link">LeetCode</a>
-              <a href="static/files/Sultana-Anika-Ahmed-Nayona-Resume.pdf" download class="text-link">Resume PDF</a>
+            <div class="contact-body">
+              <div class="contact-left">
+                <p class="eyebrow">Open to SQA and test automation roles &nbsp;·&nbsp; Dhaka, Bangladesh</p>
+                <p class="contact-text">SQA across web, mobile, API and performance testing. Looking for a team where quality matters from day one.</p>
+                <div class="contact-details">
+                  <span class="contact-item">📞 <a href="tel:+8801631647072">+880 163 164 7072</a></span>
+                  <span class="contact-item">📍 Dhaka, Bangladesh</span>
+                </div>
+                <div class="hero-links">
+                  <a href="https://www.linkedin.com/in/anikanayona/" target="_blank" rel="noopener" class="text-link">LinkedIn</a>
+                  <a href="https://github.com/anikaahmed234" target="_blank" rel="noopener" class="text-link">GitHub</a>
+                  <a href="https://www.hackerrank.com/anikanayona" target="_blank" rel="noopener" class="text-link">HackerRank</a>
+                  <a href="https://leetcode.com/anikanayona/" target="_blank" rel="noopener" class="text-link">LeetCode</a>
+                  <a href="CV_Sultana_Anika_Ahmed_Nayona.pdf" target="_blank" rel="noopener" class="text-link">Resume</a>
+                </div>
+              </div>
+              <div class="contact-right">
+                <div class="avail-card">
+                  <div class="avail-status">
+                    <span class="avail-dot"></span>
+                    <span class="avail-label">Available for opportunities</span>
+                  </div>
+                  <div class="avail-rows">
+                    <div class="avail-row">
+                      <span class="avail-key">Role</span>
+                      <span class="avail-val">SQA · Test Automation · QA Lead</span>
+                    </div>
+                    <div class="avail-row">
+                      <span class="avail-key">Type</span>
+                      <span class="avail-val">Full-time · Contract · Remote</span>
+                    </div>
+                    <div class="avail-row">
+                      <span class="avail-key">Timezone</span>
+                      <span class="avail-val">BST (UTC +6) · Flexible</span>
+                    </div>
+                    <div class="avail-row">
+                      <span class="avail-key">Response</span>
+                      <span class="avail-val">Within 24 hours</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Feedback form -->
@@ -697,32 +730,21 @@
                 <div class="feedback-field">
                   <label for="fb-type">Feedback type</label>
                   <div class="fb-type-pills" role="group" aria-label="Feedback type">
-                    <button type="button" class="fb-pill active" data-value="general">General</button>
-                    <button type="button" class="fb-pill" data-value="portfolio">Portfolio</button>
+                    <button type="button" class="fb-pill active" data-value="portfolio">Portfolio</button>
+                    <button type="button" class="fb-pill" data-value="general">General</button>
                     <button type="button" class="fb-pill" data-value="hiring">Hiring</button>
                     <button type="button" class="fb-pill" data-value="collaboration">Collaboration</button>
                   </div>
-                  <input type="hidden" id="fb-type" name="type" value="general">
+                  <input type="hidden" id="fb-type" name="type" value="portfolio">
                 </div>
                 <div class="feedback-field">
                   <label for="fb-message">Message <span class="fb-required">*</span></label>
                   <textarea id="fb-message" name="message" rows="4" placeholder="Share your thoughts…" required></textarea>
                 </div>
                 <div class="feedback-actions">
-                  <div class="fb-rating" role="group" aria-label="Star rating">
-                    <span class="fb-rating-label">Rate this portfolio</span>
-                    <div class="fb-stars" id="fb-stars">
-                      <button type="button" class="fb-star" data-val="1" aria-label="1 star">★</button>
-                      <button type="button" class="fb-star" data-val="2" aria-label="2 stars">★</button>
-                      <button type="button" class="fb-star" data-val="3" aria-label="3 stars">★</button>
-                      <button type="button" class="fb-star" data-val="4" aria-label="4 stars">★</button>
-                      <button type="button" class="fb-star" data-val="5" aria-label="5 stars">★</button>
-                    </div>
-                    <input type="hidden" id="fb-rating" name="rating" value="0">
-                  </div>
                   <button type="submit" class="fb-submit">Send Feedback</button>
                 </div>
-                <p class="fb-success" id="fb-success" aria-live="polite"></p>
+                <p class="fb-success" id="fb-success" aria-live="polite"><span class="fb-sparkle" aria-hidden="true">✦</span> Your feedback is valuable — thank you for taking the time.</p>
               </form>
             </div>
           </div>
@@ -737,6 +759,17 @@
         </div>
       </footer>
 
+    </div>
+
+    <!-- Thanks modal -->
+    <div id="thanks-modal" role="dialog" aria-modal="true" aria-labelledby="thanks-title" hidden>
+      <div class="thanks-backdrop"></div>
+      <div class="thanks-card">
+        <span class="thanks-sparkle" aria-hidden="true">✦</span>
+        <h3 id="thanks-title">Thank you!</h3>
+        <p>Your feedback has been saved. It genuinely means a lot — I read every single one.</p>
+        <button class="thanks-close" id="thanks-close">Close</button>
+      </div>
     </div>
 
     <button id="scroll-top" aria-label="Go to Top">↑</button>
@@ -883,14 +916,10 @@
           (now.getMonth() - start.getMonth());
         const years = Math.floor(totalMonths / 12);
         const months = totalMonths % 12;
-        const short = months === 0 ? `${years} yrs` : `${years} yrs ${months} mos`;
-        const full  = months === 0 ? `${years} years` : `${years} yrs ${months} mos`;
-        const eyebrow  = document.getElementById("exp-duration");
-        const bio      = document.getElementById("bio-duration");
-        const contact  = document.getElementById("contact-duration");
-        if (eyebrow) eyebrow.textContent = short + " experience";
-        if (bio)     bio.textContent     = full;
-        if (contact) contact.textContent = full;
+        const dot    = months === 0 ? `${years}` : `${years}.${months}`;
+        const full   = months === 0 ? `${years} years` : `${years} yrs ${months} mos`;
+        const eyebrow = document.getElementById("exp-duration");
+        if (eyebrow) eyebrow.textContent = dot + " YRS";
       })();
     </script>
     <script>
@@ -986,17 +1015,19 @@
         const hasHover = !window.matchMedia("(hover: none)").matches;
         if (!hasHover) return;
 
-        /* Ambient cursor glow */
-        const glow = document.createElement("div");
-        glow.id = "cursor-glow";
-        document.body.appendChild(glow);
+        /* Cursor dot + trailing ring */
+        const dot  = document.createElement("div"); dot.id  = "cursor-dot";
+        const ring = document.createElement("div"); ring.id = "cursor-ring";
+        document.body.appendChild(dot);
+        document.body.appendChild(ring);
         let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-        let gx = mx, gy = my;
+        let rx = mx, ry = my;
         document.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; }, { passive: true });
         (function tick() {
-          gx += (mx - gx) * 0.07;
-          gy += (my - gy) * 0.07;
-          glow.style.transform = "translate(" + gx + "px," + gy + "px)";
+          rx += (mx - rx) * 0.12;
+          ry += (my - ry) * 0.12;
+          dot.style.transform  = "translate(" + mx + "px," + my + "px)";
+          ring.style.transform = "translate(" + rx + "px," + ry + "px)";
           requestAnimationFrame(tick);
         })();
 
@@ -1026,11 +1057,31 @@
       </div>
     </div>
     <script>
-      /* ── Wave character slide-in ── */
+      /* ── Wave character slide-in + viewport anchor ── */
       (function () {
         const wrap = document.getElementById("wave-wrap");
         if (!wrap) return;
-        setTimeout(() => wrap.classList.add("wave-visible"), 2500);
+        setTimeout(() => { wrap.classList.add("wave-visible"); }, 2500);
+
+        /* On mobile, the URL bar appearing/hiding resizes the layout viewport
+           which makes fixed elements jump. visualViewport tracks the actual
+           visible area so we pin the mascot to the real bottom instead. */
+        if (!window.visualViewport) return;
+
+        const BOTTOM_GAP = 16; // px above the visible bottom edge
+
+        function anchorToViewport() {
+          const vv = window.visualViewport;
+          // Distance between layout bottom and visual viewport bottom
+          const layoutBottom = window.innerHeight;
+          const visualBottom = vv.offsetTop + vv.height;
+          const diff = layoutBottom - visualBottom;
+          wrap.style.bottom = (diff + BOTTOM_GAP) + 'px';
+        }
+
+        window.visualViewport.addEventListener('resize', anchorToViewport, { passive: true });
+        window.visualViewport.addEventListener('scroll', anchorToViewport, { passive: true });
+        anchorToViewport();
       })();
 
       /* ── Feedback form ── */
@@ -1044,58 +1095,151 @@
           });
         });
 
-        // Star rating
-        const stars = document.querySelectorAll(".fb-star");
-        const ratingInput = document.getElementById("fb-rating");
-        stars.forEach(star => {
-          star.addEventListener("click", () => {
-            const val = parseInt(star.dataset.val);
-            ratingInput.value = val;
-            stars.forEach(s => {
-              s.classList.toggle("selected", parseInt(s.dataset.val) <= val);
-            });
-          });
-          star.addEventListener("mouseenter", () => {
-            const val = parseInt(star.dataset.val);
-            stars.forEach(s => {
-              s.style.color = parseInt(s.dataset.val) <= val ? "#f5c542" : "";
-            });
-          });
-          star.addEventListener("mouseleave", () => {
-            const current = parseInt(ratingInput.value);
-            stars.forEach(s => {
-              s.style.color = parseInt(s.dataset.val) <= current ? "#f5c542" : "";
-            });
-          });
-        });
 
-        // Form submit — mailto fallback (no server needed)
+        // PUT YOUR GOOGLE APPS SCRIPT WEB APP URL HERE
+        const SHEET_URL = "https://script.google.com/macros/s/AKfycbylxn3XCuk3Z3lwuwPQ1_Hb6EWzSxOnAarJr8l832cArdkwiTrW_exefG3EPXh68MXx5Q/exec";
+
         document.getElementById("feedback-form").addEventListener("submit", function (e) {
           e.preventDefault();
           const name    = document.getElementById("fb-name").value.trim();
           const email   = document.getElementById("fb-email").value.trim();
           const type    = document.getElementById("fb-type").value;
           const message = document.getElementById("fb-message").value.trim();
-          const rating  = document.getElementById("fb-rating").value;
           const success = document.getElementById("fb-success");
+          const btn     = document.querySelector(".fb-submit");
 
-          if (!message) {
-            document.getElementById("fb-message").focus();
+          if (!message) { document.getElementById("fb-message").focus(); return; }
+          if (SHEET_URL === "YOUR_APPS_SCRIPT_WEB_APP_URL") {
+            success.innerHTML = '⚠️ Form endpoint not configured yet.';
             return;
           }
 
-          const subject = encodeURIComponent(`Portfolio Feedback [${type}]`);
-          const body    = encodeURIComponent(
-            `Name: ${name || "Anonymous"}\nEmail: ${email || "—"}\nType: ${type}\nRating: ${"★".repeat(+rating) || "—"}\n\n${message}`
-          );
-          window.location.href = `mailto:anikanayona@gmail.com?subject=${subject}&body=${body}`;
+          // Fire-and-forget — no-cors means we can't read the response anyway
+          fetch(SHEET_URL, {
+            method: "POST",
+            mode: "no-cors",
+            body: JSON.stringify({ name: name || "Anonymous", email: email || "—", type, message }),
+            headers: { "Content-Type": "text/plain" }
+          });
 
-          success.textContent = "✨ Thank you! Your feedback email is ready to send.";
+          // Show success immediately without waiting
           this.reset();
           document.querySelectorAll(".fb-pill").forEach((p, i) => p.classList.toggle("active", i === 0));
-          document.getElementById("fb-type").value = "general";
-          document.getElementById("fb-rating").value = "0";
-          stars.forEach(s => { s.classList.remove("selected"); s.style.color = ""; });
+          document.getElementById("fb-type").value = "portfolio";
+          const modal = document.getElementById("thanks-modal");
+          modal.hidden = false;
+          document.getElementById("thanks-close").focus();
+
+          // Celebration confetti
+          if (typeof confetti === "function") {
+            const colors = ["#7DA2A9", "#8AB6BF", "#C6B7B2", "#C0564B", "#e876a3", "#ffffff"];
+            const base = { origin: { y: 0.65 }, colors };
+            confetti({ ...base, particleCount: 60,  spread: 55,  startVelocity: 55 });
+            confetti({ ...base, particleCount: 50,  spread: 80 });
+            confetti({ ...base, particleCount: 70,  spread: 120, decay: 0.9, scalar: 0.85 });
+            confetti({ ...base, particleCount: 30,  spread: 150, startVelocity: 28, decay: 0.92 });
+          }
+        });
+      })();
+    </script>
+    <script>
+      /* ── Soft-skill bubble dodge ── */
+      (function () {
+        const cloud = document.querySelector('.soft-skills-cloud');
+        if (!cloud || window.matchMedia('(hover: none)').matches) return;
+
+        const RADIUS   = 120;
+        const STRENGTH = 70;
+
+        /* Use CSS `translate` property (independent of `transform`) so it
+           composes with the bubble-float animation which owns `transform`. */
+        function onMove(e) {
+          cloud.querySelectorAll('.skill-bubble').forEach(b => {
+            const r  = b.getBoundingClientRect();
+            const bx = r.left + r.width  / 2;
+            const by = r.top  + r.height / 2;
+            const dx = e.clientX - bx;
+            const dy = e.clientY - by;
+            const d  = Math.sqrt(dx * dx + dy * dy);
+
+            if (d < RADIUS && d > 0) {
+              const force = (1 - d / RADIUS) * STRENGTH;
+              const tx = -(dx / d) * force;
+              const ty = -(dy / d) * force;
+              b.style.transition = 'translate 0.1s ease';
+              b.style.translate   = `${tx}px ${ty}px`;
+            } else {
+              b.style.transition = 'translate 0.6s cubic-bezier(0.22,1,0.36,1)';
+              b.style.translate   = '';
+            }
+          });
+        }
+
+        function onLeave() {
+          cloud.querySelectorAll('.skill-bubble').forEach(b => {
+            b.style.transition = 'translate 0.6s cubic-bezier(0.22,1,0.36,1)';
+            b.style.translate   = '';
+          });
+        }
+
+        document.addEventListener('mousemove',  onMove,  { passive: true });
+        document.addEventListener('mouseleave', onLeave, { passive: true });
+      })();
+    </script>
+
+    <script>
+      /* ── Soft Skills see more / see less (mobile only) ── */
+      (function () {
+        var btn = document.getElementById('skills-toggle-btn');
+        var cloud = document.querySelector('#soft-skills .soft-skills-cloud');
+        if (!btn || !cloud) return;
+        var label = btn.querySelector('.toggle-label');
+
+        btn.addEventListener('click', function () {
+          var expanded = cloud.classList.toggle('skills-expanded');
+          btn.setAttribute('aria-expanded', String(expanded));
+          label.textContent = expanded ? 'See Less' : 'See More';
+        });
+      })();
+    </script>
+    <script>
+      /* ── Thanks modal ── */
+      (function () {
+        const modal   = document.getElementById("thanks-modal");
+        const closeBtn = document.getElementById("thanks-close");
+        const backdrop = modal.querySelector(".thanks-backdrop");
+        function close() { modal.hidden = true; }
+        closeBtn.addEventListener("click", close);
+        backdrop.addEventListener("click", close);
+        document.addEventListener("keydown", e => { if (!modal.hidden && e.key === "Escape") close(); });
+      })();
+    </script>
+    <script>
+      /* ── Mobile hamburger menu ── */
+      (function () {
+        const nav = document.querySelector('.morandi-nav');
+        const btn = document.querySelector('.hamburger');
+        if (!btn) return;
+
+        function closeMenu() {
+          nav.classList.remove('nav-open');
+          btn.setAttribute('aria-expanded', 'false');
+          btn.setAttribute('aria-label', 'Open navigation menu');
+        }
+
+        btn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const open = nav.classList.toggle('nav-open');
+          btn.setAttribute('aria-expanded', String(open));
+          btn.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+        });
+
+        nav.querySelectorAll('.nav-links a').forEach(function (a) {
+          a.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', function (e) {
+          if (!nav.contains(e.target)) closeMenu();
         });
       })();
     </script>
