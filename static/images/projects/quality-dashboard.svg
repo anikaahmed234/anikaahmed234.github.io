@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Quality dashboard preview</title>
+  <desc id="desc">Stylized quality dashboard with bug, test, and release status cards.</desc>
+  <rect width="960" height="540" fill="#f6efe5"/>
+  <rect x="76" y="72" width="808" height="396" rx="24" fill="#fdf8ef"/>
+  <rect x="118" y="120" width="202" height="130" rx="16" fill="#263f42"/>
+  <rect x="378" y="120" width="202" height="130" rx="16" fill="#6f9992"/>
+  <rect x="638" y="120" width="202" height="130" rx="16" fill="#d76f45"/>
+  <rect x="118" y="296" width="722" height="118" rx="16" fill="#e3d2b9"/>
+  <path d="M154 184h92M414 184h92M674 184h92" stroke="#fff7eb" stroke-width="18" stroke-linecap="round"/>
+  <path d="M158 356h202M424 356h140M628 356h126" stroke="#263f42" stroke-width="18" stroke-linecap="round"/>
+  <path d="M690 326l28 28 58-66" fill="none" stroke="#263f42" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

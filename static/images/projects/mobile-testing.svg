@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Mobile testing preview</title>
+  <desc id="desc">Stylized Android test run on a phone screen.</desc>
+  <rect width="960" height="540" fill="#e8efe9"/>
+  <rect x="330" y="44" width="300" height="452" rx="38" fill="#182d31"/>
+  <rect x="360" y="92" width="240" height="348" rx="18" fill="#f8f2e8"/>
+  <rect x="396" y="128" width="168" height="34" rx="17" fill="#6f9992"/>
+  <path d="M400 232h160M400 288h110M400 344h140" stroke="#263f42" stroke-width="18" stroke-linecap="round"/>
+  <path d="M398 202l26 26 48-56M398 318l26 26 48-56" fill="none" stroke="#d76f45" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="480" cy="466" r="15" fill="#f8f2e8"/>
+  <rect x="158" y="136" width="112" height="112" rx="20" fill="#d7c3a3"/>
+  <rect x="690" y="276" width="112" height="112" rx="20" fill="#d76f45"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Frontend build preview</title>
+  <desc id="desc">Stylized responsive website layout preview.</desc>
+  <rect width="960" height="540" fill="#f2eadf"/>
+  <rect x="82" y="94" width="610" height="346" rx="22" fill="#203438"/>
+  <rect x="124" y="148" width="526" height="70" rx="14" fill="#d76f45"/>
+  <rect x="124" y="248" width="156" height="142" rx="14" fill="#f7f1e8"/>
+  <rect x="310" y="248" width="156" height="142" rx="14" fill="#d7c3a3"/>
+  <rect x="496" y="248" width="156" height="142" rx="14" fill="#8aa7a0"/>
+  <rect x="724" y="160" width="154" height="280" rx="28" fill="#263f42"/>
+  <rect x="748" y="204" width="106" height="174" rx="14" fill="#f7f1e8"/>
+  <path d="M160 184h270M160 320h82M346 320h82M532 320h82" stroke="#203438" stroke-width="16" stroke-linecap="round"/>
+</svg>
