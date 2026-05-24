@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Portfolio of Sultana Anika Ahmed Nayona, SQA Engineer.">
-    <title>Sultana Anika Ahmed Nayona | SQA Engineer</title>
+    <meta name="description" content="Portfolio of Sultana Anika Ahmed Nayona, Software QA Engineer.">
+    <title>Sultana Anika Ahmed Nayona | Software QA Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
@@ -13,20 +13,19 @@
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   </head>
   <body data-theme="light">
+    <canvas id="web-canvas" aria-hidden="true" style="position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
     <div id="scroll-progress" aria-hidden="true"></div>
     <div class="page-shell">
 
       <nav class="morandi-nav" aria-label="Primary navigation">
         <div class="brand">
-          <span class="dot" aria-hidden="true"></span>
-          <a href="#home">Sultana Anika Ahmed Nayona</a>
+          <a href="#home" aria-label="Home"></a>
         </div>
         <div class="nav-links">
           <a href="#experience">Experience</a>
           <a href="#education">Education</a>
           <a href="#projects">Projects</a>
           <a href="#skills">Expertise</a>
-          <a href="#showcase">Showcase</a>
           <a href="#blog">Blog</a>
           <a href="#contact">Contact</a>
         </div>
@@ -50,13 +49,14 @@
             <img src="static/images/profile.png" alt="Sultana Anika Ahmed Nayona portrait" loading="lazy">
           </div>
           <div class="hero-copy">
-            <p class="eyebrow">SQA Engineer &nbsp;·&nbsp; <span id="exp-duration">...</span> &nbsp;·&nbsp; Dhaka, Bangladesh</p>
+            <p class="eyebrow">Software QA Engineer &nbsp;·&nbsp; <span id="exp-duration">...</span> &nbsp;·&nbsp; Dhaka, Bangladesh</p>
             <h1 class="name-oneline">Sultana Anika Ahmed Nayona</h1>
             <p class="summary">
-              I don't just find bugs — I prevent them. A senior SQA engineer with battle-tested experience across web, Android, iOS, and APIs. Automation is my craft,
+              I don't just find bugs — I prevent them. Currently working at <a href="https://nextventures.io" target="_blank" rel="noopener" class="bio-company">Next Ventures</a> with battle-tested experience across web, Android, iOS, and APIs. Automation is my craft,
               risk is what I map before anyone else sees it, and release confidence is what I deliver.
             </p>
-            <div class="highlights-title">What I work with</div>
+            <div style="height:1.75rem"></div>
+<div class="highlights-title">What I work with</div>
             <ul class="highlight-list">
               <li>Manual Testing: Requirement analysis, test case design &amp; execution, bug tracking · Web, Android &amp; iOS</li>
               <li>Automation: Selenium WebDriver, TestNG, Cypress, Cucumber, Appium</li>
@@ -74,6 +74,13 @@
           </div>
         </header>
 
+        <!-- Rotating quotes -->
+        <div class="quotes-strip" aria-live="polite">
+          <span class="quotes-mark" aria-hidden="true">"</span>
+          <blockquote class="quote-text" id="quote-text"></blockquote>
+          <cite class="quote-author" id="quote-author"></cite>
+        </div>
+
         <!-- Experience -->
         <section id="experience" class="section-block">
           <div class="section-heading">
@@ -85,7 +92,7 @@
             <div class="news-item">
               <div class="news-date">Jan 2024<br>Present</div>
               <div class="news-detail">
-                <p class="news-role"><strong>SQA Engineer</strong> &nbsp;—&nbsp; <a href="https://nextventures.io" target="_blank" rel="noopener" class="company">Next Ventures</a></p>
+                <p class="news-role"><strong>Software QA Engineer</strong> &nbsp;—&nbsp; <a href="https://nextventures.io" target="_blank" rel="noopener" class="company">Next Ventures</a></p>
                 <p>Manual testing across web, Android and iOS platforms; API testing with Postman and Newman; load testing with JMeter; defect tracking in Jira; close collaboration with developers on release sign-off and regression coverage.</p>
               </div>
             </div>
@@ -101,13 +108,49 @@
             <div class="news-item">
               <div class="news-date">Jun 2021<br>Feb 2022</div>
               <div class="news-detail">
-                <p class="news-role"><strong>Jr. SQA Engineer</strong> &nbsp;—&nbsp; <a href="https://www.implevista.com/" target="_blank" rel="noopener" class="company">ImpleVista BD</a></p>
+                <p class="news-role"><strong>Jr. Software QA Engineer</strong> &nbsp;—&nbsp; <a href="https://www.implevista.com/" target="_blank" rel="noopener" class="company">ImpleVista BD</a></p>
                 <p>Requirement analysis, manual test case writing and maintenance, SaaS product evaluation, structured bug reporting, knowledge-transfer sessions for the QA team, and mockup design support for development planning.</p>
               </div>
             </div>
 
           </div>
         </section>
+
+        <!-- Products strip -->
+        <div class="products-strip" aria-label="Products and projects">
+          <div class="products-track" id="products-track">
+            <!-- set 1 -->
+            <div class="product-item"><span class="product-name">FundedNext</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">FNmarkets</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">AWAZ</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">amar AWAZ</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">iquidi</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">iVCommerce</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item"><span class="product-name">Digital Campaign</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <!-- set 2 — duplicate for seamless loop -->
+            <div class="product-item" aria-hidden="true"><span class="product-name">FundedNext</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">FNmarkets</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">AWAZ</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">amar AWAZ</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">iquidi</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">iVCommerce</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+            <div class="product-item" aria-hidden="true"><span class="product-name">Digital Campaign</span></div>
+            <div class="product-sep" aria-hidden="true"></div>
+          </div>
+        </div>
 
         <!-- Education -->
         <section id="education" class="section-block">
@@ -118,9 +161,6 @@
           <div class="edu-grid">
 
             <article class="edu-card">
-              <div class="edu-image">
-                <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&h=360&q=80" alt="University campus" loading="lazy">
-              </div>
               <div class="edu-content">
                 <p class="edu-year">2017 – 2021 &nbsp;·&nbsp; <span class="sparkle-text">CGPA 3.92 / 4.00</span></p>
                 <h3 class="edu-degree">B.Sc. Computer Science &amp; Engineering</h3>
@@ -130,9 +170,6 @@
             </article>
 
             <article class="edu-card">
-              <div class="edu-image">
-                <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&w=800&h=360&q=80" alt="Higher secondary college science stream" loading="lazy">
-              </div>
               <div class="edu-content">
                 <p class="edu-year">2014 – 2016 &nbsp;·&nbsp; GPA 5.00 / 5.00</p>
                 <h3 class="edu-degree">H.S.C. — Science</h3>
@@ -158,7 +195,20 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=900&h=520&q=80" alt="Dark code editor with automation tests" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--cypress">
+                          <div class="pa-cwin">
+                            <div class="pa-topbar"><span class="pa-dot r"></span><span class="pa-dot y"></span><span class="pa-dot g"></span><span class="pa-tlabel">cypress run · e2e</span></div>
+                            <div class="pa-tbody">
+                              <div class="pa-tl pa-tl-1"><span class="pa-ck pass">✓</span>should load home page</div>
+                              <div class="pa-tl pa-tl-2"><span class="pa-ck pass">✓</span>should fill login form</div>
+                              <div class="pa-tl pa-tl-3"><span class="pa-ck pass">✓</span>should submit and redirect</div>
+                              <div class="pa-tl pa-tl-4"><span class="pa-ck run">◉</span>should verify dashboard</div>
+                            </div>
+                            <div class="pa-tfoot"><span class="pa-green">3 passing</span>&nbsp;·&nbsp;<span class="pa-purple">1 running</span></div>
+                          </div>
+                        </div>
+                      </div>
                       <span class="slide-badge">Web Automation</span>
                     </div>
                     <div class="slide-content">
@@ -176,7 +226,24 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&w=900&h=520&q=80" alt="Android mobile device testing" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--appium">
+                          <div class="pa-phone">
+                            <div class="pa-pnotch"></div>
+                            <div class="pa-pscreen">
+                              <div class="pa-pstatus">● RUNNING TESTS</div>
+                              <div class="pa-pbar-wrap"><div class="pa-pbar"></div></div>
+                              <div class="pa-ptap">
+                                <div class="pa-tapring pa-tr1"></div>
+                                <div class="pa-tapring pa-tr2"></div>
+                                <div class="pa-tapdot"></div>
+                              </div>
+                              <div class="pa-pcheck">✓ 12 assertions</div>
+                            </div>
+                            <div class="pa-phome"></div>
+                          </div>
+                        </div>
+                      </div>
                       <span class="slide-badge">Mobile QA</span>
                     </div>
                     <div class="slide-content">
@@ -194,7 +261,20 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&h=520&q=80" alt="Server infrastructure for REST API testing" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--api">
+                          <div class="pa-api">
+                            <div class="pa-arow">
+                              <div class="pa-anode pa-n-client"><span>CLIENT</span></div>
+                              <div class="pa-aconn"><div class="pa-aline"></div><div class="pa-apkt pa-pkt1"></div><div class="pa-alabel">POST /transfer</div></div>
+                              <div class="pa-anode pa-n-api"><span>API</span></div>
+                              <div class="pa-aconn"><div class="pa-aline"></div><div class="pa-apkt pa-pkt2"></div><div class="pa-alabel">SQL query</div></div>
+                              <div class="pa-anode pa-n-db"><span>DB</span></div>
+                            </div>
+                            <div class="pa-astatus"><span class="pa-ok">200 OK</span>&nbsp;·&nbsp;145ms</div>
+                          </div>
+                        </div>
+                      </div>
                       <span class="slide-badge">API QA</span>
                     </div>
                     <div class="slide-content">
@@ -212,7 +292,26 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&h=520&q=80" alt="Performance analytics and load testing charts" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--jmeter">
+                          <div class="pa-chart">
+                            <div class="pa-chartlbl">Throughput (req/s)</div>
+                            <div class="pa-bars-area">
+                              <div class="pa-bars-wrap">
+                                <div class="pa-bar-col"><div class="pa-bar" style="--bh:35%"><span>200</span></div></div>
+                                <div class="pa-bar-col"><div class="pa-bar" style="--bh:58%"><span>450</span></div></div>
+                                <div class="pa-bar-col"><div class="pa-bar" style="--bh:76%"><span>800</span></div></div>
+                                <div class="pa-bar-col"><div class="pa-bar" style="--bh:64%"><span>650</span></div></div>
+                                <div class="pa-bar-col"><div class="pa-bar" style="--bh:92%"><span>920</span></div></div>
+                              </div>
+                              <div class="pa-chart-overlay">
+                                <svg viewBox="0 0 220 100" preserveAspectRatio="none"><polyline class="pa-svgline" points="22,90 66,68 110,38 154,56 198,12"/></svg>
+                              </div>
+                            </div>
+                            <div class="pa-chartstat">Peak&nbsp;·&nbsp;<strong>1,200 req/s</strong></div>
+                          </div>
+                        </div>
+                      </div>
                       <span class="slide-badge">Performance QA</span>
                     </div>
                     <div class="slide-content">
@@ -230,7 +329,26 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?auto=format&fit=crop&w=900&h=520&q=80" alt="HTML CSS web layout project" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--devboard">
+                          <div class="pa-browser">
+                            <div class="pa-bbar"><span class="pa-dot r"></span><span class="pa-dot y"></span><span class="pa-dot g"></span><span class="pa-burl">dev-board.app</span></div>
+                            <div class="pa-blayout">
+                              <div class="pa-bsidebar">
+                                <div class="pa-bsi pa-bsi1"></div>
+                                <div class="pa-bsi pa-bsi2"></div>
+                                <div class="pa-bsi pa-bsi3"></div>
+                              </div>
+                              <div class="pa-bcontent">
+                                <div class="pa-bcard pa-bc1"></div>
+                                <div class="pa-bcard pa-bc2"></div>
+                                <div class="pa-bcard pa-bc3"></div>
+                                <div class="pa-bcard pa-bc4"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       <span class="slide-badge">Frontend Build</span>
                     </div>
                     <div class="slide-content">
@@ -248,7 +366,31 @@
                 <div class="carousel-slide">
                   <article class="project-slide-card">
                     <div class="slide-image">
-                      <img src="https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=900&h=520&q=80" alt="Responsive website on laptop" loading="lazy">
+                      <div class="proj-anim-wrap">
+                        <div class="proj-anim proj-anim--petshop">
+                          <div class="pa-devices">
+                            <div class="pa-desktop">
+                              <div class="pa-dscreen">
+                                <div class="pa-dnav"></div>
+                                <div class="pa-dcols">
+                                  <div class="pa-dcol pa-dc1"></div>
+                                  <div class="pa-dcol pa-dc2"></div>
+                                  <div class="pa-dcol pa-dc3"></div>
+                                </div>
+                              </div>
+                              <div class="pa-dfoot"><div class="pa-dstand"></div><div class="pa-dbase"></div></div>
+                            </div>
+                            <div class="pa-mobile">
+                              <div class="pa-mscreen">
+                                <div class="pa-mnav"></div>
+                                <div class="pa-mcol pa-mc1"></div>
+                                <div class="pa-mcol pa-mc2"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="pa-rbadge">RESPONSIVE · MOBILE-FIRST</div>
+                        </div>
+                      </div>
                       <span class="slide-badge">Frontend Build</span>
                     </div>
                     <div class="slide-content">
@@ -279,144 +421,134 @@
             <span class="bar" aria-hidden="true"></span>
             <h2>Tech Expertise</h2>
           </div>
-          <div class="expandable-grid">
+          <div class="skills-slider-wrap">
+            <div class="skills-slider" id="skills-slider">
 
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1607706189992-eae578626c86?auto=format&fit=crop&w=800&h=450&q=80" alt="Automation code on dark screen" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Cypress · Selenium · TestNG · Appium</p>
-                <h3>Test Automation</h3>
-                <p class="card-summary">Web automation with Cypress and Selenium WebDriver; BDD frameworks with Cucumber and TestNG; Android mobile automation with Appium across real devices.</p>
-                <div class="tag-row">
-                  <span class="tag">cypress</span>
-                  <span class="tag">selenium</span>
-                  <span class="tag">testng</span>
-                  <span class="tag">appium</span>
-                  <span class="tag">cucumber</span>
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  <h3>Test Automation</h3>
                 </div>
-              </div>
-            </article>
-
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&h=450&q=80" alt="Network cables and API infrastructure" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Postman · Newman · REST Assured</p>
-                <h3>API Testing</h3>
-                <p class="card-summary">End-to-end REST API validation with Postman collections, automated runs via Newman CLI, and programmatic assertions with REST Assured in Java.</p>
-                <div class="tag-row">
-                  <span class="tag">postman</span>
-                  <span class="tag">newman</span>
-                  <span class="tag">rest assured</span>
-                  <span class="tag">java</span>
+                <div class="skill-card-body">
+                  <p class="card-meta">Cypress · Selenium · TestNG · Appium</p>
+                  <p class="card-summary">Web automation with Cypress and Selenium WebDriver; BDD frameworks with Cucumber and TestNG; Android mobile automation with Appium across real devices.</p>
+                  <div class="tag-row">
+                    <span class="tag">cypress</span><span class="tag">selenium</span><span class="tag">testng</span><span class="tag">appium</span><span class="tag">cucumber</span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&h=450&q=80" alt="Performance testing analytics dashboard" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Apache JMeter</p>
-                <h3>Performance Testing</h3>
-                <p class="card-summary">Load and stress testing with Apache JMeter — thread groups, ramp-up strategies, and HTML reports to surface bottlenecks before production.</p>
-                <div class="tag-row">
-                  <span class="tag">jmeter</span>
-                  <span class="tag">load testing</span>
-                  <span class="tag">performance</span>
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>API Testing</h3>
                 </div>
-              </div>
-            </article>
-
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&h=450&q=80" alt="Manual QA testing on device" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Jira · Azure DevOps · Git</p>
-                <h3>Manual QA &amp; Tools</h3>
-                <p class="card-summary">Manual testing across web, Android and iOS; test case writing and maintenance; bug tracking in Jira and Azure DevOps; database validation with DBeaver, HeidiSQL and SSMS.</p>
-                <div class="tag-row">
-                  <span class="tag">manual testing</span>
-                  <span class="tag">jira</span>
-                  <span class="tag">azure devops</span>
-                  <span class="tag">mysql</span>
+                <div class="skill-card-body">
+                  <p class="card-meta">Postman · Newman · REST Assured</p>
+                  <p class="card-summary">End-to-end REST API validation with Postman collections, automated runs via Newman CLI, and programmatic assertions with REST Assured in Java.</p>
+                  <div class="tag-row">
+                    <span class="tag">postman</span><span class="tag">newman</span><span class="tag">rest assured</span><span class="tag">java</span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&h=450&q=80" alt="Database storage and validation" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">MySQL · DBeaver · HeidiSQL · SSMS</p>
-                <h3>Database Testing</h3>
-                <p class="card-summary">Query-level data validation, schema checks, and post-deployment database verification using MySQL, DBeaver, HeidiSQL and SQL Server Management Studio.</p>
-                <div class="tag-row">
-                  <span class="tag">mysql</span>
-                  <span class="tag">dbeaver</span>
-                  <span class="tag">heidisql</span>
-                  <span class="tag">ssms</span>
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>Performance Testing</h3>
                 </div>
-              </div>
-            </article>
-
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=450&q=80" alt="Agile team standup and collaboration" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Agile · Scrum · BDD</p>
-                <h3>Agile &amp; BDD</h3>
-                <p class="card-summary">Agile/Scrum workflows using Jira, ClickUp and Trello; behavior-driven development with Cucumber and Gherkin; sprint planning, daily standups and release ceremonies.</p>
-                <div class="tag-row">
-                  <span class="tag">agile</span>
-                  <span class="tag">scrum</span>
-                  <span class="tag">cucumber</span>
-                  <span class="tag">bdd</span>
+                <div class="skill-card-body">
+                  <p class="card-meta">Apache JMeter</p>
+                  <p class="card-summary">Load and stress testing with Apache JMeter — thread groups, ramp-up strategies, and HTML reports to surface bottlenecks before production.</p>
+                  <div class="tag-row">
+                    <span class="tag">jmeter</span><span class="tag">load testing</span><span class="tag">performance</span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&h=450&q=80" alt="Modern browser automation with Playwright" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">Playwright · Python · Pytest</p>
-                <h3>Playwright &amp; Python</h3>
-                <p class="card-summary">Modern end-to-end automation with Playwright in Python — cross-browser testing, parallel execution, and trace viewer debugging. Pytest for structured suites with fixtures and parametrization.</p>
-                <div class="tag-row">
-                  <span class="tag">playwright</span>
-                  <span class="tag">python</span>
-                  <span class="tag">pytest</span>
-                  <span class="tag">cross-browser</span>
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>Manual QA &amp; Tools</h3>
                 </div>
-              </div>
-            </article>
-
-            <article class="expandable-card">
-              <div class="card-image">
-                <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&h=450&q=80" alt="CI/CD pipeline and GitHub Actions workflow" loading="lazy">
-              </div>
-              <div class="card-content">
-                <p class="card-meta">GitHub Actions · Jenkins · TestRail</p>
-                <h3>CI/CD &amp; DevOps Tools</h3>
-                <p class="card-summary">Integrating automated test runs into CI/CD pipelines with GitHub Actions and Jenkins — scheduling regression suites, generating HTML reports, and managing test cases in TestRail and Jira.</p>
-                <div class="tag-row">
-                  <span class="tag">github actions</span>
-                  <span class="tag">jenkins</span>
-                  <span class="tag">testrail</span>
-                  <span class="tag">chrome devtools</span>
+                <div class="skill-card-body">
+                  <p class="card-meta">Jira · Azure DevOps · Git</p>
+                  <p class="card-summary">Manual testing across web, Android and iOS; test case writing and maintenance; bug tracking in Jira and Azure DevOps; database validation with DBeaver, HeidiSQL and SSMS.</p>
+                  <div class="tag-row">
+                    <span class="tag">manual testing</span><span class="tag">jira</span><span class="tag">azure devops</span><span class="tag">mysql</span>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>Database Testing</h3>
+                </div>
+                <div class="skill-card-body">
+                  <p class="card-meta">MySQL · DBeaver · HeidiSQL · SSMS</p>
+                  <p class="card-summary">Query-level data validation, schema checks, and post-deployment database verification using MySQL, DBeaver, HeidiSQL and SQL Server Management Studio.</p>
+                  <div class="tag-row">
+                    <span class="tag">mysql</span><span class="tag">dbeaver</span><span class="tag">heidisql</span><span class="tag">ssms</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>Agile &amp; BDD</h3>
+                </div>
+                <div class="skill-card-body">
+                  <p class="card-meta">Agile · Scrum · BDD</p>
+                  <p class="card-summary">Agile/Scrum workflows using Jira, ClickUp and Trello; behavior-driven development with Cucumber and Gherkin; sprint planning, daily standups and release ceremonies.</p>
+                  <div class="tag-row">
+                    <span class="tag">agile</span><span class="tag">scrum</span><span class="tag">cucumber</span><span class="tag">bdd</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>Playwright &amp; Python</h3>
+                </div>
+                <div class="skill-card-body">
+                  <p class="card-meta">Playwright · Python · Pytest</p>
+                  <p class="card-summary">Modern end-to-end automation with Playwright in Python — cross-browser testing, parallel execution, and trace viewer debugging. Pytest for structured suites with fixtures and parametrization.</p>
+                  <div class="tag-row">
+                    <span class="tag">playwright</span><span class="tag">python</span><span class="tag">pytest</span><span class="tag">cross-browser</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-card-accent"></div>
+                <div class="skill-card-header">
+                  
+                  <h3>CI/CD &amp; DevOps Tools</h3>
+                </div>
+                <div class="skill-card-body">
+                  <p class="card-meta">GitHub Actions · Jenkins · TestRail</p>
+                  <p class="card-summary">Integrating automated test runs into CI/CD pipelines with GitHub Actions and Jenkins — scheduling regression suites, generating HTML reports, and managing test cases in TestRail and Jira.</p>
+                  <div class="tag-row">
+                    <span class="tag">github actions</span><span class="tag">jenkins</span><span class="tag">testrail</span><span class="tag">chrome devtools</span>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+            <div class="skills-slider-controls">
+              <button class="skills-slider-btn skills-slider-prev" aria-label="Previous skill">&#8592;</button>
+              <div class="skills-slider-dots" id="skills-slider-dots"></div>
+              <button class="skills-slider-btn skills-slider-next" aria-label="Next skill">&#8594;</button>
+            </div>
           </div>
         </section>
 
@@ -467,30 +599,6 @@
             <h2>QA Showcase</h2>
           </div>
 
-          <div class="terminal-wrap" aria-label="Simulated test execution output">
-            <div class="terminal-bar">
-              <span class="terminal-dot red"></span>
-              <span class="terminal-dot yellow"></span>
-              <span class="terminal-dot green"></span>
-              <span class="terminal-bar-title">playwright test · regression suite</span>
-            </div>
-            <span class="terminal-line cmd">$ npx playwright test --project=chromium,firefox,webkit</span>
-            <span class="terminal-line dim">Running 147 tests using 4 workers</span>
-            <span class="terminal-line info"> </span>
-            <span class="terminal-line pass">  ✓ auth › login with valid credentials (342ms)</span>
-            <span class="terminal-line pass">  ✓ auth › redirect to dashboard on success (188ms)</span>
-            <span class="terminal-line pass">  ✓ payments › deposit flow — bank transfer (521ms)</span>
-            <span class="terminal-line pass">  ✓ payments › withdrawal limit enforcement (294ms)</span>
-            <span class="terminal-line warn">  ~ api › rate-limit headers present — flaky (1 retry)</span>
-            <span class="terminal-line pass">  ✓ api › rate-limit headers present (retry 1) (410ms)</span>
-            <span class="terminal-line pass">  ✓ mobile › bottom-nav gesture swipe (Android) (633ms)</span>
-            <span class="terminal-line pass">  ✓ performance › LCP under 2.5s on 3G throttle (1.2s)</span>
-            <span class="terminal-line info"> </span>
-            <span class="terminal-line dim">  145 passed · 1 flaky · 1 skipped</span>
-            <span class="terminal-line pass">  All tests passed ✓  Duration: 4m 17s</span>
-            <span class="terminal-line info"> </span>
-            <span class="terminal-line cmd">$ <span class="terminal-cursor"></span></span>
-          </div>
 
           <!--
           <div class="counters-row">
@@ -513,68 +621,95 @@
           </div>
           -->
 
-          <div class="showcase-grid" style="margin-top:1.75rem;">
+          <div class="sc-wrap" style="margin-top:1.75rem;">
+            <div class="sc-viewport">
+              <div class="sc-track" id="sc-track">
 
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">🐛</div>
-              <h3>Bugs I Found</h3>
-              <p>Identified a critical race condition in a payment gateway where concurrent deposit + withdrawal requests caused double-debit on specific mobile networks. Caught in staging, preventing production data loss. Also found a silent API failure where expired JWT tokens returned HTTP 200 with empty data instead of 401 — invisible to all monitoring tools.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">1,200+ bugs reported</span>
-                <span class="showcase-stat">45+ critical blockers</span>
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Bugs I Found</h3>
+                      <p>Uncovered a critical race condition in a fintech payment gateway: concurrent deposit + withdrawal requests triggered double-debit on specific mobile networks. Found through exploratory testing on real devices — caught in staging before any customer was affected. Also surfaced a silent auth failure: expired JWT tokens returned HTTP 200 with an empty payload instead of 401, invisible to all existing monitoring and alerting tools.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">1,200+ bugs reported</span>
+                        <span class="showcase-stat">45+ critical blockers</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Testing Strategy</h3>
+                      <p>Built risk-based testing strategies that prioritise high-impact user journeys — auth, payments, and data integrity — while using exploratory testing for new features. Structured test pyramids with unit coverage owned by devs, API contracts validated with Postman, and E2E regression owned by QA.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">1,500+ test cases written</span>
+                        <span class="showcase-stat">Risk-based coverage</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Production Issues Prevented</h3>
+                      <p>Flagged a broken OTP flow on iOS 17 that passed all Android tests — caught because real device testing was part of the release checklist. Intercepted a DB migration that would have silently truncated phone number fields for international numbers, found during pre-release data validation.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">Zero P0 escapes (2+ yrs)</span>
+                        <span class="showcase-stat">Web · iOS · Android</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Performance Benchmarks</h3>
+                      <p>Ran JMeter load tests simulating 1,000 concurrent users on the transaction API. Identified a bottleneck at the database connection pool (exhausted at 600 VUs) and collaborated with backend to tune limits — throughput improved 40% post-fix. Established baseline SLAs: P95 under 1s, P99 under 2s.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">1,000 VU load tested</span>
+                        <span class="showcase-stat">40% throughput gain</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Automation Coverage</h3>
+                      <p>Built Cypress and Playwright automation suites covering 85%+ of critical user flows across 3 products. Integrated with CI/CD via GitHub Actions — suite runs on every PR, reports HTML results as artifacts, and blocks merges on failures. Reduced manual regression time from 3 days to under 45 minutes per release.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">700+ automated tests</span>
+                        <span class="showcase-stat">85%+ flow coverage</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="sc-slide">
+                  <div class="sc-card">
+<div class="sc-card-right">
+                      <h3>Lessons Learned</h3>
+                      <p>Emulators lie — real devices expose battery-saver mode, OEM overlays, and network interruptions that emulators mask. Never skip exploratory testing after automation passes: automation finds known bugs, exploration finds unknown ones. A defect found in dev costs 10× less than one found in production.</p>
+                      <div class="showcase-stats">
+                        <span class="showcase-stat">5+ products QA'd end-to-end</span>
+                        <span class="showcase-stat">Shift-left advocate</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
-
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">🗺️</div>
-              <h3>Testing Strategy</h3>
-              <p>Built risk-based testing strategies that prioritise high-impact user journeys — auth, payments, and data integrity — while using exploratory testing for new features. Structured test pyramids with unit coverage owned by devs, API contracts validated with Postman, and E2E regression owned by QA.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">1,500+ test cases written</span>
-                <span class="showcase-stat">Risk-based coverage</span>
-              </div>
+            <div class="sc-controls">
+              <button class="sc-text-btn sc-prev" aria-label="Previous">&#8592; Prev</button>
+              <span class="sc-counter"><span class="sc-counter-cur" id="sc-cur">01</span> <span class="sc-counter-total">/ 06</span></span>
+              <button class="sc-text-btn sc-next" aria-label="Next">Next &#8594;</button>
             </div>
-
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">🚀</div>
-              <h3>Production Issues Prevented</h3>
-              <p>Flagged a broken OTP flow on iOS 17 that passed all Android tests — caught because real device testing was part of the release checklist. Intercepted a DB migration that would have silently truncated phone number fields for international numbers, found during pre-release data validation.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">Zero P0 escapes (2+ yrs)</span>
-                <span class="showcase-stat">Web · iOS · Android</span>
-              </div>
-            </div>
-
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">⚡</div>
-              <h3>Performance Benchmarks</h3>
-              <p>Ran JMeter load tests simulating 1,000 concurrent users on the transaction API. Identified a bottleneck at the database connection pool (exhausted at 600 VUs) and collaborated with backend to tune limits — throughput improved 40% post-fix. Established baseline SLAs: P95 under 1s, P99 under 2s.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">1,000 VU load tested</span>
-                <span class="showcase-stat">40% throughput gain</span>
-              </div>
-            </div>
-
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">🤖</div>
-              <h3>Automation Coverage</h3>
-              <p>Built Cypress and Playwright automation suites covering 85%+ of critical user flows across 3 products. Integrated with CI/CD via GitHub Actions — suite runs on every PR, reports HTML results as artifacts, and blocks merges on failures. Reduced manual regression time from 3 days to under 45 minutes per release.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">700+ automated tests</span>
-                <span class="showcase-stat">85%+ flow coverage</span>
-              </div>
-            </div>
-
-            <div class="showcase-card reveal">
-              <div class="showcase-icon">📖</div>
-              <h3>Lessons Learned</h3>
-              <p>Emulators lie — real devices expose battery-saver mode, OEM overlays, and network interruptions that emulators mask. Never skip exploratory testing after automation passes: automation finds known bugs, exploration finds unknown ones. A defect found in dev costs 10× less than one found in production.</p>
-              <div class="showcase-stats">
-                <span class="showcase-stat">5+ products QA'd end-to-end</span>
-                <span class="showcase-stat">Shift-left advocate</span>
-              </div>
-            </div>
-
           </div>
         </section>
 
@@ -584,80 +719,198 @@
             <span class="bar" aria-hidden="true"></span>
             <h2>Blog</h2>
           </div>
-          <div class="blog-grid">
+          <div class="blog-slider-wrap">
+            <div class="blog-slider" id="blog-slider">
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=800&h=420&q=80" alt="Test automation code on screen" loading="lazy">
-                <span class="blog-tag">Test Automation</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">May 2025</p>
-                <h3>Why Most Automation Suites Fail — and How to Build One That Doesn't</h3>
-                <p class="blog-excerpt">A flaky test suite is worse than no suite at all. It trains your team to ignore failures. Here's how to design automation that stays trustworthy: start with a stable test base, isolate state between tests, and treat your test code with the same care as production code.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- screen -->
+                    <rect x="60" y="20" width="280" height="130" rx="10" fill="#2d1550" stroke="#7c3aed" stroke-width="1.5"/>
+                    <rect x="60" y="20" width="280" height="22" rx="10" fill="#3d2060"/>
+                    <circle cx="78" cy="31" r="5" fill="#ff6b6b"/><circle cx="94" cy="31" r="5" fill="#ffd93d"/><circle cx="110" cy="31" r="5" fill="#6bcb77"/>
+                    <!-- code lines -->
+                    <rect x="80" y="56" width="60" height="6" rx="3" fill="#a78bfa" opacity="0.9"><animate attributeName="width" values="60;90;60" dur="2s" repeatCount="indefinite"/></rect>
+                    <rect x="80" y="70" width="120" height="6" rx="3" fill="#c4b5fd" opacity="0.6"/>
+                    <rect x="80" y="84" width="90" height="6" rx="3" fill="#7c3aed" opacity="0.8"><animate attributeName="width" values="90;50;90" dur="2.5s" repeatCount="indefinite"/></rect>
+                    <rect x="80" y="98" width="140" height="6" rx="3" fill="#a78bfa" opacity="0.5"/>
+                    <rect x="80" y="112" width="70" height="6" rx="3" fill="#e8a84c" opacity="0.9"><animate attributeName="width" values="70;110;70" dur="1.8s" repeatCount="indefinite"/></rect>
+                    <!-- cursor blink -->
+                    <rect x="156" y="112" width="7" height="6" rx="1" fill="#a78bfa"><animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/></rect>
+                    <!-- tick -->
+                    <circle cx="300" cy="100" r="22" fill="#6bcb77" opacity="0.15"><animate attributeName="r" values="22;26;22" dur="2s" repeatCount="indefinite"/></circle>
+                    <polyline points="289,100 297,110 313,88" fill="none" stroke="#6bcb77" stroke-width="3" stroke-linecap="round"/>
+                  </svg>
+                  <span class="blog-tag">Test Automation</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">May 2025</p>
+                  <h3>Why Most Automation Suites Fail — and How to Build One That Doesn't</h3>
+                  <p class="blog-excerpt">A flaky test suite is worse than no suite at all. It trains your team to ignore failures. Here's how to design automation that stays trustworthy: start with a stable test base, isolate state between tests, and treat your test code with the same care as production code.</p>
+                </div>
+              </article>
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=420&q=80" alt="API network infrastructure" loading="lazy">
-                <span class="blog-tag">API Testing</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">Apr 2025</p>
-                <h3>API Testing Beyond the Happy Path: Edge Cases That Actually Matter</h3>
-                <p class="blog-excerpt">Most teams test the success response and call it done. But the real quality signal lives in the edges — expired tokens, malformed payloads, concurrent writes, and timeouts. This post walks through the API test scenarios that reveal production bugs before they reach your users.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- nodes -->
+                    <circle cx="200" cy="95" r="28" fill="#2d1550" stroke="#a78bfa" stroke-width="2"/>
+                    <text x="200" y="99" text-anchor="middle" fill="#a78bfa" font-size="11" font-family="monospace" font-weight="bold">API</text>
+                    <circle cx="80" cy="50" r="18" fill="#2d1550" stroke="#7c3aed" stroke-width="1.5"/>
+                    <text x="80" y="54" text-anchor="middle" fill="#c4b5fd" font-size="9" font-family="monospace">GET</text>
+                    <circle cx="80" cy="140" r="18" fill="#2d1550" stroke="#7c3aed" stroke-width="1.5"/>
+                    <text x="80" y="144" text-anchor="middle" fill="#c4b5fd" font-size="9" font-family="monospace">POST</text>
+                    <circle cx="320" cy="50" r="18" fill="#2d1550" stroke="#e8a84c" stroke-width="1.5"/>
+                    <text x="320" y="54" text-anchor="middle" fill="#e8a84c" font-size="9" font-family="monospace">200</text>
+                    <circle cx="320" cy="140" r="18" fill="#2d1550" stroke="#ff6b6b" stroke-width="1.5"/>
+                    <text x="320" y="144" text-anchor="middle" fill="#ff6b6b" font-size="9" font-family="monospace">401</text>
+                    <!-- animated lines -->
+                    <line x1="98" y1="58" x2="172" y2="80" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6 3"><animate attributeName="stroke-dashoffset" values="0;-18" dur="1s" repeatCount="indefinite"/></line>
+                    <line x1="98" y1="132" x2="172" y2="108" stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="6 3"><animate attributeName="stroke-dashoffset" values="0;-18" dur="1.4s" repeatCount="indefinite"/></line>
+                    <line x1="228" y1="80" x2="302" y2="58" stroke="#e8a84c" stroke-width="1.5" stroke-dasharray="6 3"><animate attributeName="stroke-dashoffset" values="0;-18" dur="0.9s" repeatCount="indefinite"/></line>
+                    <line x1="228" y1="108" x2="302" y2="132" stroke="#ff6b6b" stroke-width="1.5" stroke-dasharray="6 3"><animate attributeName="stroke-dashoffset" values="0;-18" dur="1.2s" repeatCount="indefinite"/></line>
+                    <!-- pulse -->
+                    <circle cx="200" cy="95" r="28" fill="none" stroke="#a78bfa" stroke-width="1"><animate attributeName="r" values="28;42;28" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/></circle>
+                  </svg>
+                  <span class="blog-tag">API Testing</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">Apr 2025</p>
+                  <h3>API Testing Beyond the Happy Path: Edge Cases That Actually Matter</h3>
+                  <p class="blog-excerpt">Most teams test the success response and call it done. But the real quality signal lives in the edges — expired tokens, malformed payloads, concurrent writes, and timeouts. This post walks through the API test scenarios that reveal production bugs before they reach your users.</p>
+                </div>
+              </article>
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&h=420&q=80" alt="Performance metrics dashboard" loading="lazy">
-                <span class="blog-tag">Performance QA</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">Mar 2025</p>
-                <h3>Load Testing With JMeter: From Zero to a Meaningful Report</h3>
-                <p class="blog-excerpt">Running JMeter is easy. Getting results that actually tell you something is harder. This guide covers thread group design, ramp-up strategy, and how to read your HTML report — specifically the response time percentiles and error rate trends that reveal where your system breaks under load.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- bars -->
+                    <rect x="60" y="140" width="30" height="30" rx="4" fill="#7c3aed" opacity="0.7"><animate attributeName="height" values="30;70;30" dur="2s" repeatCount="indefinite"/><animate attributeName="y" values="140;100;140" dur="2s" repeatCount="indefinite"/></rect>
+                    <rect x="105" y="100" width="30" height="70" rx="4" fill="#a78bfa" opacity="0.8"><animate attributeName="height" values="70;40;70" dur="2.3s" repeatCount="indefinite"/><animate attributeName="y" values="100;130;100" dur="2.3s" repeatCount="indefinite"/></rect>
+                    <rect x="150" y="80" width="30" height="90" rx="4" fill="#7c3aed" opacity="0.9"><animate attributeName="height" values="90;110;90" dur="1.8s" repeatCount="indefinite"/><animate attributeName="y" values="80;60;80" dur="1.8s" repeatCount="indefinite"/></rect>
+                    <rect x="195" y="60" width="30" height="110" rx="4" fill="#e8a84c" opacity="0.85"><animate attributeName="height" values="110;80;110" dur="2.1s" repeatCount="indefinite"/><animate attributeName="y" values="60;90;60" dur="2.1s" repeatCount="indefinite"/></rect>
+                    <rect x="240" y="90" width="30" height="80" rx="4" fill="#a78bfa" opacity="0.7"><animate attributeName="height" values="80;100;80" dur="1.6s" repeatCount="indefinite"/><animate attributeName="y" values="90;70;90" dur="1.6s" repeatCount="indefinite"/></rect>
+                    <rect x="285" y="50" width="30" height="120" rx="4" fill="#7c3aed"><animate attributeName="height" values="120;90;120" dur="2.4s" repeatCount="indefinite"/><animate attributeName="y" values="50;80;50" dur="2.4s" repeatCount="indefinite"/></rect>
+                    <!-- baseline -->
+                    <line x1="50" y1="170" x2="350" y2="170" stroke="#a78bfa" stroke-width="1.5" opacity="0.3"/>
+                    <!-- label -->
+                    <text x="200" y="25" text-anchor="middle" fill="#c4b5fd" font-size="11" font-family="monospace" opacity="0.8">P95 RESPONSE TIME</text>
+                  </svg>
+                  <span class="blog-tag">Performance QA</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">Mar 2025</p>
+                  <h3>Load Testing With JMeter: From Zero to a Meaningful Report</h3>
+                  <p class="blog-excerpt">Running JMeter is easy. Getting results that actually tell you something is harder. This guide covers thread group design, ramp-up strategy, and how to read your HTML report — specifically the response time percentiles and error rate trends that reveal where your system breaks under load.</p>
+                </div>
+              </article>
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?auto=format&fit=crop&w=800&h=420&q=80" alt="Mobile device testing" loading="lazy">
-                <span class="blog-tag">Mobile QA</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">Feb 2025</p>
-                <h3>Mobile Testing Checklist: What Emulators Miss That Real Devices Don't</h3>
-                <p class="blog-excerpt">Emulators are fast and free, but they lie. Battery saver mode, interrupted network conditions, third-party keyboards, and OEM notification overlays are all invisible in an emulator. Here's a practical checklist for what to verify on real Android and iOS devices before every release.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- phone -->
+                    <rect x="155" y="15" width="90" height="160" rx="14" fill="#2d1550" stroke="#a78bfa" stroke-width="2"/>
+                    <rect x="163" y="28" width="74" height="120" rx="6" fill="#1a0a2e"/>
+                    <circle cx="200" cy="163" r="6" fill="#a78bfa" opacity="0.6"/>
+                    <!-- screen content -->
+                    <rect x="170" y="38" width="60" height="8" rx="3" fill="#7c3aed" opacity="0.8"><animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/></rect>
+                    <rect x="170" y="54" width="40" height="6" rx="3" fill="#c4b5fd" opacity="0.5"/>
+                    <rect x="170" y="68" width="55" height="6" rx="3" fill="#a78bfa" opacity="0.6"/>
+                    <!-- checkmarks -->
+                    <circle cx="178" cy="90" r="7" fill="#6bcb77" opacity="0.2"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.5s" repeatCount="indefinite"/></circle>
+                    <polyline points="174,90 177,94 183,86" fill="none" stroke="#6bcb77" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="200" cy="90" r="7" fill="#6bcb77" opacity="0.2"><animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.5s" begin="0.5s" repeatCount="indefinite"/></circle>
+                    <polyline points="196,90 199,94 205,86" fill="none" stroke="#6bcb77" stroke-width="1.5" stroke-linecap="round"/>
+                    <circle cx="222" cy="90" r="7" fill="#e8a84c" opacity="0.2"><animate attributeName="opacity" values="0.2;0.9;0.2" dur="1.5s" begin="1s" repeatCount="indefinite"/></circle>
+                    <text x="222" y="94" text-anchor="middle" fill="#e8a84c" font-size="8">?</text>
+                    <!-- signal waves -->
+                    <path d="M 310 80 Q 330 60 350 80" fill="none" stroke="#a78bfa" stroke-width="2" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.2s" repeatCount="indefinite"/></path>
+                    <path d="M 300 90 Q 330 55 360 90" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.25"><animate attributeName="opacity" values="0.25;0.7;0.25" dur="1.2s" begin="0.2s" repeatCount="indefinite"/></path>
+                  </svg>
+                  <span class="blog-tag">Mobile QA</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">Feb 2025</p>
+                  <h3>Mobile Testing Checklist: What Emulators Miss That Real Devices Don't</h3>
+                  <p class="blog-excerpt">Emulators are fast and free, but they lie. Battery saver mode, interrupted network conditions, third-party keyboards, and OEM notification overlays are all invisible in an emulator. Here's a practical checklist for what to verify on real Android and iOS devices before every release.</p>
+                </div>
+              </article>
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&h=420&q=80" alt="Modern Playwright automation setup" loading="lazy">
-                <span class="blog-tag">Playwright</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">Jan 2025</p>
-                <h3>Why Playwright Is Replacing Selenium in Modern QA Stacks</h3>
-                <p class="blog-excerpt">Selenium still works — but Playwright ships with auto-waits, native network interception, multi-browser support in a single API, and a trace viewer that shows you exactly what failed. This post covers why teams are migrating, what to watch out for, and how to write your first Playwright suite in Python.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- browser windows -->
+                    <rect x="40" y="30" width="100" height="70" rx="8" fill="#2d1550" stroke="#7c3aed" stroke-width="1.5"/>
+                    <rect x="40" y="30" width="100" height="16" rx="8" fill="#3d2060"/>
+                    <circle cx="52" cy="38" r="3.5" fill="#ff6b6b"/><circle cx="62" cy="38" r="3.5" fill="#ffd93d"/><circle cx="72" cy="38" r="3.5" fill="#6bcb77"/>
+                    <rect x="150" y="55" width="100" height="70" rx="8" fill="#2d1550" stroke="#a78bfa" stroke-width="1.5"/>
+                    <rect x="150" y="55" width="100" height="16" rx="8" fill="#3d2060"/>
+                    <circle cx="162" cy="63" r="3.5" fill="#ff6b6b"/><circle cx="172" cy="63" r="3.5" fill="#ffd93d"/><circle cx="182" cy="63" r="3.5" fill="#6bcb77"/>
+                    <rect x="260" y="30" width="100" height="70" rx="8" fill="#2d1550" stroke="#e8a84c" stroke-width="1.5"/>
+                    <rect x="260" y="30" width="100" height="16" rx="8" fill="#3d2060"/>
+                    <circle cx="272" cy="38" r="3.5" fill="#ff6b6b"/><circle cx="282" cy="38" r="3.5" fill="#ffd93d"/><circle cx="292" cy="38" r="3.5" fill="#6bcb77"/>
+                    <!-- sync arrows -->
+                    <path d="M 142 65 L 150 65" stroke="#7c3aed" stroke-width="2" marker-end="url(#arr)"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/></path>
+                    <path d="M 252 65 L 260 65" stroke="#e8a84c" stroke-width="2"><animate attributeName="opacity" values="1;0.3;1" dur="1.5s" begin="0.5s" repeatCount="indefinite"/></path>
+                    <!-- playwright label -->
+                    <text x="200" y="155" text-anchor="middle" fill="#a78bfa" font-size="12" font-family="monospace" font-weight="bold">▶ playwright test</text>
+                    <rect x="90" y="165" width="220" height="3" rx="2" fill="#2d1550"/>
+                    <rect x="90" y="165" width="0" height="3" rx="2" fill="#7c3aed"><animate attributeName="width" values="0;220;0" dur="3s" repeatCount="indefinite"/></rect>
+                  </svg>
+                  <span class="blog-tag">Playwright</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">Jan 2025</p>
+                  <h3>Why Playwright Is Replacing Selenium in Modern QA Stacks</h3>
+                  <p class="blog-excerpt">Selenium still works — but Playwright ships with auto-waits, native network interception, multi-browser support in a single API, and a trace viewer that shows you exactly what failed. This post covers why teams are migrating, what to watch out for, and how to write your first Playwright suite in Python.</p>
+                </div>
+              </article>
 
-            <article class="blog-card">
-              <div class="blog-image">
-                <img src="https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?auto=format&fit=crop&w=800&h=420&q=80" alt="Debugging and root cause investigation" loading="lazy">
-                <span class="blog-tag">Bug Investigation</span>
-              </div>
-              <div class="blog-body">
-                <p class="blog-date">Dec 2024</p>
-                <h3>The Art of Bug Investigation: From Symptom to Root Cause</h3>
-                <p class="blog-excerpt">The symptom is never the bug. When a payment fails intermittently on mobile, the root cause might be a race condition, a flaky network retry, or a backend timeout — each requiring a different fix. This post walks through my investigation framework: reproduce → isolate → bisect → confirm → document. With real fintech QA examples.</p>
-              </div>
-            </article>
+              <article class="blog-card">
+                <div class="blog-image blog-anim-wrap">
+                  <svg class="blog-anim" viewBox="0 0 400 190" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="400" height="190" fill="#1a0a2e"/>
+                    <!-- magnifier -->
+                    <circle cx="170" cy="95" r="55" fill="none" stroke="#7c3aed" stroke-width="2.5" opacity="0.4"/>
+                    <circle cx="170" cy="95" r="45" fill="#2d1550" stroke="#a78bfa" stroke-width="2"/>
+                    <!-- bug icon -->
+                    <ellipse cx="170" cy="95" rx="14" ry="18" fill="#ff6b6b" opacity="0.85"/>
+                    <circle cx="170" cy="82" r="8" fill="#ff6b6b" opacity="0.85"/>
+                    <line x1="158" y1="88" x2="148" y2="80" stroke="#ff6b6b" stroke-width="1.5"/><line x1="158" y1="95" x2="146" y2="95" stroke="#ff6b6b" stroke-width="1.5"/><line x1="158" y1="102" x2="148" y2="110" stroke="#ff6b6b" stroke-width="1.5"/>
+                    <line x1="182" y1="88" x2="192" y2="80" stroke="#ff6b6b" stroke-width="1.5"/><line x1="182" y1="95" x2="194" y2="95" stroke="#ff6b6b" stroke-width="1.5"/><line x1="182" y1="102" x2="192" y2="110" stroke="#ff6b6b" stroke-width="1.5"/>
+                    <!-- handle -->
+                    <line x1="207" y1="132" x2="240" y2="165" stroke="#a78bfa" stroke-width="5" stroke-linecap="round"/>
+                    <!-- scan ring -->
+                    <circle cx="170" cy="95" r="45" fill="none" stroke="#e8a84c" stroke-width="1.5" stroke-dasharray="10 5"><animateTransform attributeName="transform" type="rotate" from="0 170 95" to="360 170 95" dur="4s" repeatCount="indefinite"/></circle>
+                    <!-- steps -->
+                    <text x="285" y="60" fill="#a78bfa" font-size="9" font-family="monospace">→ reproduce</text>
+                    <text x="285" y="80" fill="#a78bfa" font-size="9" font-family="monospace">→ isolate</text>
+                    <text x="285" y="100" fill="#e8a84c" font-size="9" font-family="monospace">→ bisect</text>
+                    <text x="285" y="120" fill="#6bcb77" font-size="9" font-family="monospace">→ confirm</text>
+                    <rect x="283" y="108" width="70" height="1" fill="#a78bfa" opacity="0.3"><animate attributeName="y" values="108;128;108" dur="2s" repeatCount="indefinite"/></rect>
+                  </svg>
+                  <span class="blog-tag">Bug Investigation</span>
+                </div>
+                <div class="blog-body">
+                  <p class="blog-date">Dec 2024</p>
+                  <h3>The Art of Bug Investigation: From Symptom to Root Cause</h3>
+                  <p class="blog-excerpt">The symptom is never the bug. When a payment fails intermittently on mobile, the root cause might be a race condition, a flaky network retry, or a backend timeout — each requiring a different fix. This post walks through my investigation framework: reproduce → isolate → bisect → confirm → document. With real fintech QA examples.</p>
+                </div>
+              </article>
 
+            </div>
+            <div class="blog-slider-footer">
+              <button class="blog-slider-btn blog-slider-prev" aria-label="Previous">&#8592;</button>
+              <div class="blog-track-wrap">
+                <div class="blog-track-fill" id="blog-track-fill"></div>
+              </div>
+              <button class="blog-slider-btn blog-slider-next" aria-label="Next">&#8594;</button>
+            </div>
           </div>
         </section>
 
@@ -673,7 +926,17 @@
                 <p class="eyebrow">Open to SQA and test automation roles &nbsp;·&nbsp; Dhaka, Bangladesh</p>
                 <p class="contact-text">SQA across web, mobile, API and performance testing. Looking for a team where quality matters from day one.</p>
                 <div class="contact-details">
-                  <span class="contact-item">📞 <a href="tel:+8801631647072">+880 163 164 7072</a></span>
+                  <span class="contact-item" style="width:fit-content">📞 <span class="phone-reveal" id="phone-reveal" role="button" tabindex="0" aria-label="Click to reveal phone number">
+                    <span class="phone-masked">+880 <span id="phone-dots">••• ••• ••••</span><span class="phone-hint">tap to reveal</span></span>
+                    <a class="phone-number" href="tel:+8801631647072" tabindex="-1" aria-hidden="true">+880 <span id="phone-glitter-target">163 164 7072</span></a>
+                  </span> <button class="phone-copy-btn" id="phone-copy-btn" aria-label="Copy phone number" title="Copy number" style="display:none">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                  </button></span>
+                  <span class="contact-item" style="width:fit-content">✉️ <a href="mailto:anikanayona@gmail.com" class="email-link">anikanayona@gmail.com</a>
+                    <button class="phone-copy-btn visible" id="email-copy-btn" aria-label="Copy email" title="Copy email">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                    </button>
+                  </span>
                   <span class="contact-item">📍 Dhaka, Bangladesh</span>
                 </div>
                 <div class="hero-links">
@@ -712,10 +975,17 @@
               </div>
             </div>
 
-            <!-- Feedback form -->
-            <div class="feedback-divider"></div>
+          </div>
+        </section>
+
+        <!-- Feedback -->
+        <section id="feedback" class="section-block">
+          <div class="section-heading">
+            <span class="bar" aria-hidden="true"></span>
+            <h2>Give a Feedback</h2>
+          </div>
+          <div class="contact-card">
             <div class="feedback-section">
-              <p class="highlights-title">💬 Give a Feedback</p>
               <form class="feedback-form" id="feedback-form" novalidate>
                 <div class="feedback-row">
                   <div class="feedback-field">
@@ -754,8 +1024,7 @@
 
       <footer class="site-footer">
         <div class="footer-container">
-          &copy; 2026 Sultana Anika Ahmed Nayona &bull;
-          <a href="mailto:anikanayona@gmail.com">anikanayona@gmail.com</a>
+          &copy; 2026 Sultana Anika Ahmed Nayona
         </div>
       </footer>
 
@@ -772,7 +1041,10 @@
       </div>
     </div>
 
-    <button id="scroll-top" aria-label="Go to Top">↑</button>
+    <button id="scroll-top" aria-label="Go to Top">
+      <span class="scroll-top-arrow">↑</span>
+      <span class="scroll-top-ring"></span>
+    </button>
     <script src="site.js"></script>
     <script>
       /* ── Three.js hero background ── */
@@ -810,7 +1082,7 @@
         const pGeo = new THREE.BufferGeometry();
         pGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
         const pMat = new THREE.PointsMaterial({
-          color: 0x7DA2A9,
+          color: 0x4D8FD6,
           size: 0.055,
           transparent: true,
           opacity: 0.75,
@@ -822,10 +1094,10 @@
         /* Wireframe icosahedron accent */
         const icoGeo = new THREE.IcosahedronGeometry(0.7, 0);
         const icoMat = new THREE.MeshBasicMaterial({
-          color: 0x7DA2A9,
+          color: 0x1B3F72,
           wireframe: true,
           transparent: true,
-          opacity: 0.18,
+          opacity: 0.22,
         });
         const ico = new THREE.Mesh(icoGeo, icoMat);
         ico.position.set(-4, 1.2, 1);
@@ -834,7 +1106,7 @@
         /* Second smaller accent */
         const ico2 = new THREE.Mesh(
           new THREE.IcosahedronGeometry(0.35, 0),
-          new THREE.MeshBasicMaterial({ color: 0xC6B7B2, wireframe: true, transparent: true, opacity: 0.22 })
+          new THREE.MeshBasicMaterial({ color: 0x5B7FA6, wireframe: true, transparent: true, opacity: 0.28 })
         );
         ico2.position.set(4.5, -1, 0.5);
         scene.add(ico2);
@@ -908,6 +1180,198 @@
       })();
     </script>
     <script>
+      /* ── Rotating quotes ── */
+      (function () {
+        const quotes = [
+          { text: "Quality is not an act, it is a habit.", author: "Aristotle" },
+          { text: "Testing leads to failure, and failure leads to understanding.", author: "Burt Rutan" },
+          { text: "The bitterness of poor quality remains long after the sweetness of meeting the schedule has been forgotten.", author: "Karl Wiegers" },
+          { text: "If debugging is the process of removing bugs, then programming must be the process of putting them in.", author: "Edsger W. Dijkstra" },
+          { text: "A good tester doesn't just break things — she knows why they break and how to prevent it next time.", author: "Anonymous" },
+          { text: "Software testing is a sport where the goal is to find problems — not to play the game perfectly.", author: "James Bach" },
+        ];
+
+        const textEl   = document.getElementById('quote-text');
+        const authorEl = document.getElementById('quote-author');
+        if (!textEl || !authorEl) return;
+
+        let idx = 0;
+
+        function show(i) {
+          textEl.classList.remove('visible');
+          authorEl.classList.remove('visible');
+          setTimeout(() => {
+            textEl.textContent   = quotes[i].text;
+            authorEl.textContent = '— ' + quotes[i].author;
+            textEl.classList.add('visible');
+            authorEl.classList.add('visible');
+          }, 420);
+        }
+
+        show(0);
+        setInterval(() => { idx = (idx + 1) % quotes.length; show(idx); }, 5500);
+      })();
+    </script>
+    <script>
+      /* ── QA Showcase carousel ── */
+      (function () {
+        const track   = document.getElementById('sc-track');
+        const curEl   = document.getElementById('sc-cur');
+        const prevBtn = document.querySelector('.sc-prev');
+        const nextBtn = document.querySelector('.sc-next');
+        if (!track) return;
+
+        const slides = track.querySelectorAll('.sc-slide');
+        const total  = slides.length;
+        let current  = 0, autoTimer;
+
+        function goTo(idx) {
+          current = ((idx % total) + total) % total;
+          track.style.transform = 'translateX(-' + (current * 100) + '%)';
+          curEl.textContent = String(current + 1).padStart(2, '0');
+        }
+
+        function resetAuto() {
+          clearInterval(autoTimer);
+          autoTimer = setInterval(() => { if (current < total - 1) goTo(current + 1); }, 5000);
+        }
+
+        prevBtn.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+        nextBtn.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+        track.closest('.sc-wrap').addEventListener('mouseenter', () => clearInterval(autoTimer));
+        track.closest('.sc-wrap').addEventListener('mouseleave', resetAuto);
+
+        let txStart = 0;
+        track.addEventListener('touchstart', e => { txStart = e.touches[0].clientX; }, { passive: true });
+        track.addEventListener('touchend', e => {
+          const dx = e.changedTouches[0].clientX - txStart;
+          if (Math.abs(dx) > 45) { goTo(current + (dx < 0 ? 1 : -1)); resetAuto(); }
+        });
+
+        /* reveal on scroll */
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        track.closest('.sc-wrap').classList.add('reveal');
+        io.observe(track.closest('.sc-wrap'));
+
+        goTo(0);
+        resetAuto();
+      })();
+    </script>
+    <script>
+      /* ── Blog slider ── */
+      (function () {
+        const slider  = document.getElementById('blog-slider');
+        const fill    = document.getElementById('blog-track-fill');
+        const prevBtn = document.querySelector('.blog-slider-prev');
+        const nextBtn = document.querySelector('.blog-slider-next');
+        if (!slider) return;
+
+        const cards = Array.from(slider.querySelectorAll('.blog-card'));
+        const total = cards.length;
+        let cur = 0;
+
+        function goTo(i) {
+          cur = ((i % total) + total) % total;
+          const sr = slider.getBoundingClientRect();
+          const cr = cards[cur].getBoundingClientRect();
+          slider.scrollTo({ left: slider.scrollLeft + (cr.left - sr.left), behavior: 'smooth' });
+          updateFill();
+        }
+
+        function updateFill() {
+          fill.style.width = Math.round((cur / (total - 1)) * 100) + '%';
+        }
+
+        prevBtn.addEventListener('click', () => goTo(cur - 1));
+        nextBtn.addEventListener('click', () => goTo(cur + 1));
+
+        /* sync cur on manual swipe */
+        slider.addEventListener('scroll', () => {
+          const sr = slider.getBoundingClientRect();
+          let closest = 0, minDist = Infinity;
+          cards.forEach((c, i) => {
+            const d = Math.abs(c.getBoundingClientRect().left - sr.left);
+            if (d < minDist) { minDist = d; closest = i; }
+          });
+          if (closest !== cur) { cur = closest; updateFill(); }
+        }, { passive: true });
+
+        /* reveal */
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+        }, { threshold: 0.12 });
+        cards.forEach((c, i) => {
+          c.classList.add('reveal', 'stagger-' + Math.min(i + 1, 6));
+          io.observe(c);
+        });
+
+        updateFill();
+      })();
+    </script>
+    <script>
+      /* ── Skills slider ── */
+      (function () {
+        const slider   = document.getElementById('skills-slider');
+        const dotsWrap = document.getElementById('skills-slider-dots');
+        const prevBtn  = document.querySelector('.skills-slider-prev');
+        const nextBtn  = document.querySelector('.skills-slider-next');
+        if (!slider) return;
+
+        const cards    = Array.from(slider.querySelectorAll('.skill-card'));
+        const total    = cards.length;
+        const dotCount = total - 2; // 6 dots: last 2 positions share the same scroll end
+        let cur = 0;
+
+        for (let i = 0; i < dotCount; i++) {
+          const d = document.createElement('button');
+          d.className = 'skills-slider-dot' + (i === 0 ? ' active' : '');
+          d.setAttribute('aria-label', 'Skill ' + (i + 1));
+          d.addEventListener('click', () => goTo(i));
+          dotsWrap.appendChild(d);
+        }
+
+        function goTo(i) {
+          cur = ((i % total) + total) % total;
+          const sr = slider.getBoundingClientRect();
+          const cr = cards[cur].getBoundingClientRect();
+          slider.scrollTo({ left: slider.scrollLeft + (cr.left - sr.left), behavior: 'smooth' });
+          updateDots();
+        }
+
+        function updateDots() {
+          const activeDot = Math.min(cur, dotCount - 1);
+          dotsWrap.querySelectorAll('.skills-slider-dot').forEach((d, i) =>
+            d.classList.toggle('active', i === activeDot)
+          );
+        }
+
+        prevBtn.addEventListener('click', () => goTo(cur <= 0 ? dotCount - 1 : cur - 1));
+        nextBtn.addEventListener('click', () => goTo(cur >= dotCount - 1 ? 0 : cur + 1));
+
+        /* sync cur on manual swipe */
+        slider.addEventListener('scroll', () => {
+          const sr = slider.getBoundingClientRect();
+          let closest = 0, minDist = Infinity;
+          cards.forEach((c, i) => {
+            const d = Math.abs(c.getBoundingClientRect().left - sr.left);
+            if (d < minDist) { minDist = d; closest = i; }
+          });
+          if (closest !== cur) { cur = closest; updateDots(); }
+        }, { passive: true });
+
+        /* Reveal */
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); io.unobserve(e.target); } });
+        }, { threshold: 0.15 });
+        cards.forEach((c, i) => {
+          c.classList.add('reveal', 'stagger-' + Math.min(i + 1, 6));
+          io.observe(c);
+        });
+      })();
+    </script>
+    <script>
       (function () {
         const start = new Date(2021, 5, 1); // June 2021 — ImpleVista BD
         const now = new Date();
@@ -926,10 +1390,21 @@
       (function () {
         const btn = document.getElementById("scroll-top");
         const nav = document.querySelector(".morandi-nav");
+        let scrollTimer = null;
         function onScroll() {
           if (btn) btn.classList.toggle("show-scroll", window.scrollY > 300);
-          if (nav) nav.classList.toggle("scrolled", window.scrollY > 60);
+          if (nav) {
+            nav.classList.toggle("scrolled", window.scrollY > 60);
+            if (window.scrollY > 60) {
+              nav.classList.add("hide-on-scroll");
+              clearTimeout(scrollTimer);
+              scrollTimer = setTimeout(() => nav.classList.remove("hide-on-scroll"), 800);
+            } else {
+              nav.classList.remove("hide-on-scroll");
+            }
+          }
         }
+        if (nav) nav.addEventListener("mouseenter", () => nav.classList.remove("hide-on-scroll"));
         window.addEventListener("scroll", onScroll, { passive: true });
         if (btn) btn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
         onScroll();
@@ -944,6 +1419,22 @@
           const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
           bar.style.width = pct + "%";
         }, { passive: true });
+      })();
+
+      /* ── Active nav link on scroll ── */
+      (function () {
+        const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+        const sections = Array.from(navLinks).map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+        const io = new IntersectionObserver(entries => {
+          entries.forEach(e => {
+            if (e.isIntersecting) {
+              navLinks.forEach(a => a.classList.remove('active'));
+              const link = document.querySelector('.nav-links a[href="#' + e.target.id + '"]');
+              if (link) link.classList.add('active');
+            }
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(s => io.observe(s));
       })();
 
       /* ── Scroll-reveal with IntersectionObserver ── */
@@ -1024,15 +1515,15 @@
         let rx = mx, ry = my;
         document.addEventListener("mousemove", e => { mx = e.clientX; my = e.clientY; }, { passive: true });
         (function tick() {
-          rx += (mx - rx) * 0.12;
-          ry += (my - ry) * 0.12;
+          rx += (mx - rx) * 0.28;
+          ry += (my - ry) * 0.28;
           dot.style.transform  = "translate(" + mx + "px," + my + "px)";
           ring.style.transform = "translate(" + rx + "px," + ry + "px)";
           requestAnimationFrame(tick);
         })();
 
         /* 3D card tilt */
-        document.querySelectorAll(".expandable-card, .edu-card, .blog-card, .showcase-card").forEach(card => {
+        document.querySelectorAll(".expandable-card, .skill-card, .edu-card, .blog-card, .sc-card").forEach(card => {
           card.addEventListener("mousemove", e => {
             const r = card.getBoundingClientRect();
             const x = (e.clientX - r.left) / r.width - 0.5;
@@ -1052,8 +1543,8 @@
     <!-- ── Wave character mascot (pixel monster, left side) ── -->
     <div id="wave-wrap">
       <div id="wave-char">
-        <div class="wave-bubble">Hi there! 👋<span>I test things so bugs don't reach you!</span></div>
-        <img src="static/images/mascot.png" alt="Pixel art mascot" width="150" height="150" aria-hidden="true" style="image-rendering:pixelated;display:block;">
+        <div class="wave-bubble" role="button" tabindex="0" style="cursor:pointer" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" onkeydown="if(event.key==='Enter'||event.key===' ')document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hi there! 👋<span>I test things so bugs don't reach you!</span></div>
+        <img src="static/images/mascot.png" alt="Pixel art mascot" width="150" height="150" aria-hidden="true" style="image-rendering:pixelated;display:block;transform:scaleX(-1);">
       </div>
     </div>
     <script>
@@ -1061,7 +1552,27 @@
       (function () {
         const wrap = document.getElementById("wave-wrap");
         if (!wrap) return;
-        setTimeout(() => { wrap.classList.add("wave-visible"); }, 2500);
+        const bubble = wrap.querySelector(".wave-bubble");
+
+        setTimeout(() => {
+          wrap.classList.add("wave-visible");
+          bubble && bubble.classList.add("bubble-ringing");
+        }, 2500);
+
+        /* Stop ringing when user is near the contact section */
+        const contactSection = document.getElementById("contact");
+        if (contactSection && bubble) {
+          const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+              if (e.isIntersecting) {
+                bubble.classList.remove("bubble-ringing");
+              } else {
+                bubble.classList.add("bubble-ringing");
+              }
+            });
+          }, { threshold: 0.15 });
+          observer.observe(contactSection);
+        }
 
         /* On mobile, the URL bar appearing/hiding resizes the layout viewport
            which makes fixed elements jump. visualViewport tracks the actual
@@ -1132,7 +1643,7 @@
 
           // Celebration confetti
           if (typeof confetti === "function") {
-            const colors = ["#7DA2A9", "#8AB6BF", "#C6B7B2", "#C0564B", "#e876a3", "#ffffff"];
+            const colors = ["#1B3F72", "#4D8FD6", "#5B7FA6", "#C4893A", "#E8A84C", "#ffffff"];
             const base = { origin: { y: 0.65 }, colors };
             confetti({ ...base, particleCount: 60,  spread: 55,  startVelocity: 55 });
             confetti({ ...base, particleCount: 50,  spread: 80 });
@@ -1240,6 +1751,259 @@
 
         document.addEventListener('click', function (e) {
           if (!nav.contains(e.target)) closeMenu();
+        });
+      })();
+    </script>
+    <script>
+      /* ── Floating hexagon grid background ── */
+      (function () {
+        var canvas = document.getElementById('web-canvas');
+        var ctx = canvas.getContext('2d');
+        var W, H, t = 0;
+        var mouse = { x: -9999, y: -9999 };
+
+        function isDark() { return document.body.getAttribute('data-theme') === 'dark'; }
+        function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+
+        var HEX_R = 46;  /* hex circumradius */
+        var cols, rows, hexes = [];
+
+        function buildGrid() {
+          hexes = [];
+          var dx = HEX_R * Math.sqrt(3);
+          var dy = HEX_R * 1.5;
+          cols = Math.ceil(W / dx) + 2;
+          rows = Math.ceil(H / dy) + 2;
+          for (var r = -1; r < rows; r++) {
+            for (var c = -1; c < cols; c++) {
+              var cx = c * dx + (r % 2 === 0 ? 0 : dx / 2);
+              var cy = r * dy;
+              hexes.push({
+                cx: cx, cy: cy,
+                phase: Math.random() * Math.PI * 2,
+                speed: 0.0004 + Math.random() * 0.0006
+              });
+            }
+          }
+        }
+
+        function hexPath(x, y, r) {
+          ctx.beginPath();
+          for (var i = 0; i < 6; i++) {
+            var angle = Math.PI / 180 * (60 * i - 30);
+            var px = x + r * Math.cos(angle);
+            var py = y + r * Math.sin(angle);
+            i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+          }
+          ctx.closePath();
+        }
+
+        function draw() {
+          t++;
+          ctx.clearRect(0, 0, W, H);
+          var dark = isDark();
+
+          for (var i = 0; i < hexes.length; i++) {
+            var h = hexes[i];
+            /* mouse proximity brighten */
+            var mdx = mouse.x - h.cx, mdy = mouse.y - h.cy;
+            var mdist = Math.sqrt(mdx * mdx + mdy * mdy);
+            var proximity = Math.max(0, 1 - mdist / 200);
+
+            var alpha = (dark ? 0.06 : 0.04) + proximity * 0.12;
+            var strokeAlpha = (dark ? 0.10 : 0.07) + proximity * 0.18;
+
+            var r = HEX_R - 2;
+            hexPath(h.cx, h.cy, r);
+            ctx.fillStyle = dark
+              ? 'rgba(77,143,214,' + alpha.toFixed(3) + ')'
+              : 'rgba(27,63,114,' + alpha.toFixed(3) + ')';
+            ctx.fill();
+
+            hexPath(h.cx, h.cy, r);
+            ctx.strokeStyle = dark
+              ? 'rgba(77,143,214,' + strokeAlpha.toFixed(3) + ')'
+              : 'rgba(27,63,114,' + strokeAlpha.toFixed(3) + ')';
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+
+          requestAnimationFrame(draw);
+        }
+
+        window.addEventListener('resize', function () { resize(); buildGrid(); });
+        window.addEventListener('mousemove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; });
+        window.addEventListener('mouseleave', function () { mouse.x = -9999; mouse.y = -9999; });
+
+        resize();
+        buildGrid();
+        draw();
+      })();
+      /* ── end Hexagon grid ── */
+
+      (function () {
+        var el = document.getElementById('phone-reveal');
+        if (!el) return;
+        var target = '+8801631647072';
+        var numEl  = el.querySelector('.phone-number');
+
+        var glitterColors = ['#E8A84C','#FFD700','#4D8FD6','#fff','#C4893A','#a8d8ff'];
+
+        function spawnGlitter(rect) {
+          for (var i = 0; i < 40; i++) {
+            (function(i) {
+              var span = document.createElement('span');
+              var color = glitterColors[Math.floor(Math.random() * glitterColors.length)];
+              var size  = 1 + Math.random() * 1.8;
+              var x     = rect.left + Math.random() * rect.width;
+              var y     = rect.top  + Math.random() * rect.height;
+              var dx    = (Math.random() - 0.5) * 18;
+              var dy    = -(4 + Math.random() * 18);
+              var delay = Math.random() * 200;
+              var dur   = 400 + Math.random() * 350;
+              Object.assign(span.style, {
+                position: 'fixed', left: x+'px', top: y+'px',
+                width: size+'px', height: size+'px',
+                borderRadius: '50%', background: color,
+                pointerEvents: 'none', zIndex: '99999',
+                boxShadow: '0 0 '+(size*3)+'px '+size+'px '+color,
+                transition: 'transform '+dur+'ms ease '+delay+'ms, opacity '+dur+'ms ease '+delay+'ms',
+                transform: 'translate(0,0)', opacity: '1'
+              });
+              document.body.appendChild(span);
+              requestAnimationFrame(function() {
+                requestAnimationFrame(function() {
+                  span.style.transform = 'translate('+dx+'px,'+dy+'px)';
+                  span.style.opacity = '0';
+                  setTimeout(function() { span.remove(); }, dur + delay + 50);
+                });
+              });
+            })(i);
+          }
+        }
+
+        function softReveal() {
+          if (el.classList.contains('revealed')) return;
+          el.classList.add('revealed');
+          numEl.removeAttribute('tabindex');
+
+          var dotsSpan = document.getElementById('phone-dots');
+          var glitterRect;
+          if (dotsSpan) {
+            var dr = dotsSpan.getBoundingClientRect();
+            /* if inline span collapses to 0 width fall back to parent offset estimate */
+            if (dr.width > 4) {
+              glitterRect = dr;
+            }
+          }
+          if (!glitterRect) {
+            var elRect = el.getBoundingClientRect();
+            glitterRect = { left: elRect.left + elRect.width * 0.28, top: elRect.top, width: elRect.width * 0.72, height: elRect.height };
+          }
+          spawnGlitter(glitterRect);
+
+          var maskedEl = el.querySelector('.phone-masked');
+          if (maskedEl) {
+            maskedEl.style.transition = 'opacity 0.4s ease, filter 0.4s ease';
+            maskedEl.style.opacity = '0';
+            maskedEl.style.filter = 'blur(6px)';
+            setTimeout(function() { maskedEl.style.display = 'none'; }, 420);
+          }
+
+          numEl.innerHTML = '+880 <span id="phone-glitter-target">163 164 7072</span>';
+          numEl.href = 'tel:+8801631647072';
+          numEl.style.opacity = '0';
+          numEl.style.filter = 'blur(8px)';
+          numEl.style.transition = 'opacity 0.6s ease 0.3s, filter 0.6s ease 0.3s';
+          numEl.style.userSelect = 'text';
+          numEl.style.webkitUserSelect = 'text';
+          requestAnimationFrame(function() {
+            requestAnimationFrame(function() {
+              numEl.style.opacity = '1';
+              numEl.style.filter = 'blur(0)';
+              setTimeout(function() {
+                numEl.classList.add('phone-shimmer');
+                setTimeout(function() { numEl.classList.remove('phone-shimmer'); }, 2200);
+              }, 400);
+            });
+          });
+
+          var copyBtn = document.getElementById('phone-copy-btn');
+          if (copyBtn) {
+            copyBtn.style.display = 'inline-flex';
+            setTimeout(function() { copyBtn.classList.add('visible'); }, 800);
+            copyBtn.addEventListener('click', function(e) {
+              e.stopPropagation();
+              navigator.clipboard && navigator.clipboard.writeText(target).then(function() {
+                var orig = copyBtn.innerHTML;
+                copyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+                copyBtn.classList.add('copied');
+                setTimeout(function() { copyBtn.innerHTML = orig; copyBtn.classList.remove('copied'); }, 1800);
+              });
+            });
+          }
+        }
+
+        el.addEventListener('click', function () {
+          if (!el.classList.contains('revealed')) softReveal();
+        });
+        el.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.classList.contains('revealed') ? navigator.clipboard && navigator.clipboard.writeText(target) : softReveal(); }
+        });
+
+        /* email copy btn */
+        var emailCopyBtn = document.getElementById('email-copy-btn');
+        if (emailCopyBtn) {
+          emailCopyBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            navigator.clipboard && navigator.clipboard.writeText('anikanayona@gmail.com').then(function() {
+              var orig = emailCopyBtn.innerHTML;
+              emailCopyBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+              emailCopyBtn.classList.add('copied');
+              setTimeout(function() { emailCopyBtn.innerHTML = orig; emailCopyBtn.classList.remove('copied'); }, 1800);
+            });
+          });
+        }
+
+        function showCopyToast() {
+          var t = document.createElement('span');
+          t.textContent = 'Copied!';
+          Object.assign(t.style, {
+            position: 'fixed', bottom: '5rem', left: '50%',
+            transform: 'translateX(-50%) translateY(8px)',
+            background: 'var(--color-primary)', color: '#fff',
+            padding: '0.4rem 1rem', borderRadius: '999px',
+            fontSize: '0.78rem', fontWeight: '600',
+            zIndex: '9999', opacity: '0',
+            transition: 'opacity 0.25s ease, transform 0.25s ease',
+            pointerEvents: 'none'
+          });
+          document.body.appendChild(t);
+          requestAnimationFrame(function () {
+            t.style.opacity = '1'; t.style.transform = 'translateX(-50%) translateY(0)';
+            setTimeout(function () {
+              t.style.opacity = '0';
+              setTimeout(function () { t.remove(); }, 300);
+            }, 1800);
+          });
+        }
+      })();
+
+      (function () {
+        ['skills-slider', 'blog-slider'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (!el) return;
+          var scrolling = false;
+          el.addEventListener('wheel', function (e) {
+            if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+            e.preventDefault();
+            if (scrolling) return;
+            scrolling = true;
+            requestAnimationFrame(function () {
+              document.documentElement.scrollTop += e.deltaY;
+              scrolling = false;
+            });
+          }, { passive: false });
         });
       })();
     </script>
