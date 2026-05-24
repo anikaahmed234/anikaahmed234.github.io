@@ -82,7 +82,7 @@ h1, h2, h3, p {
 .page-shell {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 6.5rem 1.25rem 4rem;
+  padding: 2rem 1.25rem 4rem;
   position: relative;
   z-index: 1;
 }
@@ -90,19 +90,19 @@ h1, h2, h3, p {
 /* ── Navigation ── */
 
 .morandi-nav {
-  position: fixed;
-  top: 1rem;
-  left: 1.25rem;
-  right: 1.25rem;
-  width: auto;
-  max-width: 1068px;
-  margin: 0 auto;
+  position: sticky;
+  top: 0.6rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0.6rem auto 0;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1.5rem;
-  border-radius: 999px;
+  padding: 0.75rem 2rem;
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.72);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
@@ -193,8 +193,27 @@ body[data-theme="dark"] .morandi-nav.scrolled {
   border-radius: 8px;
   transition: color 0.2s ease, background 0.2s ease;
   position: relative;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer !important;
 }
-.nav-links a:hover,
+@media (hover: hover) {
+  .nav-links a:hover {
+    color: var(--color-primary);
+    background: rgba(27,63,114,0.07);
+  }
+}
+
+.nav-home-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3rem 0.5rem !important;
+}
+.nav-home-icon svg {
+  display: block;
+  flex-shrink: 0;
+}
 .nav-links a:focus-visible {
   color: var(--color-primary);
   background: rgba(27,63,114,0.07);
@@ -1304,7 +1323,7 @@ body[data-theme="dark"] .blog-card {
 
 .blog-image {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .blog-image img {
@@ -1312,6 +1331,7 @@ body[data-theme="dark"] .blog-card {
   height: 190px;
   object-fit: cover;
   display: block;
+  border-radius: 12px 12px 0 0;
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -1321,6 +1341,7 @@ body[data-theme="dark"] .blog-card {
 .blog-anim-wrap {
   background: #0a1220;
   overflow: hidden;
+  border-radius: 12px 12px 0 0;
 }
 .blog-anim {
   width: 100%;
@@ -2180,7 +2201,7 @@ body[data-theme="dark"] .thanks-card {
 
 @media (max-width: 600px) {
   .page-shell {
-    padding: 5.5rem 1.25rem 3rem;
+    padding: 1.25rem 1.25rem 3rem;
   }
 
   .hero {
@@ -2340,7 +2361,11 @@ body {
 }
 
 /* text-link hover colour lift */
-.nav-links a:hover,
+@media (hover: hover) {
+  .nav-links a:hover {
+    color: var(--color-highlight);
+  }
+}
 .nav-links a:focus-visible {
   color: var(--color-highlight);
 }
@@ -3171,7 +3196,7 @@ body[data-theme="dark"] .counter-chip {
 
   .morandi-nav {
     flex-wrap: wrap;
-    border-radius: 20px;
+    border-radius: 16px;
   }
 
   .morandi-nav.nav-open {
