@@ -3818,3 +3818,398 @@ body[data-theme="dark"] .counter-chip {
 @media (max-width: 640px) {
   .proj-anim-wrap { min-height: 200px; }
 }
+
+/* ════════════════════════════════════════
+   Bento Grid — shared base
+   ════════════════════════════════════════ */
+
+.bento-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+/* ── Experience grid: 3 columns ── */
+.bento-grid--experience {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ── Skills grid: 4 columns ── */
+.bento-grid--skills {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* ── Education grid: 3 columns ── */
+.bento-grid--education {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ── Column/row spans ── */
+.bento-span-2 { grid-column: span 2; }
+.bento-row-2  { grid-row:    span 2; }
+
+/* ── Base card ── */
+.bento-card {
+  background: rgba(255, 255, 255, 0.93);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(27, 75, 138, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease,
+              border-color 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+body[data-theme="dark"] .bento-card {
+  background: var(--color-surface);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.32), inset 0 1px 0 var(--color-surface);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(27, 75, 138, 0.22);
+  border-color: rgba(27, 75, 138, 0.3);
+}
+
+/* Top accent stripe on hover */
+.bento-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-highlight));
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.bento-card:hover::before { opacity: 1; }
+
+/* ── Accent (navy) card ── */
+.bento-card--accent {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: var(--color-text);
+  box-shadow: 0 8px 32px rgba(27, 75, 138, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+.bento-card--accent:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  box-shadow: 0 20px 48px rgba(27, 75, 138, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+.bento-card--accent::before { display: none; }
+
+body[data-theme="dark"] .bento-card--accent {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* ── Primary (highlighted) card ── */
+.bento-card--primary {
+  border-color: rgba(27, 75, 138, 0.25);
+}
+.bento-card--primary::after {
+  content: "CURRENT";
+  position: absolute;
+  top: 1.1rem;
+  right: 1.1rem;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #fff;
+  background: var(--color-primary);
+  padding: 0.18rem 0.65rem;
+  border-radius: 999px;
+}
+body[data-theme="dark"] .bento-card--primary::after {
+  background: var(--color-secondary);
+}
+
+/* ── Bento typography helpers ── */
+.bento-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--color-primary);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.bento-card--accent .bento-date {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.bento-role {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  color: var(--color-text);
+}
+
+.bento-company {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+  transition: color 0.2s ease;
+}
+.bento-company:hover { color: var(--color-highlight); }
+
+.bento-company-plain {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.bento-desc {
+  font-size: 0.87rem;
+  line-height: 1.65;
+  color: var(--color-muted);
+  margin: 0;
+  flex: 1;
+}
+
+.bento-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+/* ── Stats (accent card) ── */
+.bento-stat-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  justify-content: center;
+  flex: 1;
+}
+
+.bento-stat-group--center {
+  align-items: center;
+  text-align: center;
+}
+
+.bento-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.bento-stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+}
+
+.bento-stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bento-stat-note {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── Skills bento card extras ── */
+.bento-skill-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.bento-skill-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+}
+
+.bento-skill-sub {
+  font-size: 0.8rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ── Education bento extras ── */
+.bento-card--edu .bento-role {
+  font-size: 1.15rem;
+}
+
+/* ── Responsive collapse ── */
+@media (max-width: 768px) {
+  .bento-grid--experience,
+  .bento-grid--skills,
+  .bento-grid--education {
+    grid-template-columns: 1fr;
+  }
+
+  .bento-span-2,
+  .bento-row-2 {
+    grid-column: unset;
+    grid-row: unset;
+  }
+}
+
+/* ══════════════════════════════════════════════════════
+   ── Microinteractions ──
+   ══════════════════════════════════════════════════════ */
+
+/* ── 1. Bento card 3D tilt: shine pseudo-element ──
+   Note: .bento-card--primary already uses ::after for the "CURRENT" badge,
+   so we scope the shine to all OTHER bento cards to avoid conflict.          */
+.bento-card {
+  will-change: transform;
+}
+.bento-card:not(.bento-card--primary)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at var(--shine-x, 50%) var(--shine-y, 50%),
+    rgba(255, 255, 255, 0.13) 0%,
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.bento-card:not(.bento-card--primary):hover::after {
+  opacity: 1;
+}
+
+/* ── 3. Button ripple ── */
+.chip-link,
+.sc-text-btn,
+.skills-slider-btn,
+.carousel-btn,
+.blog-slider-btn {
+  position: relative;
+  overflow: hidden;
+}
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(0);
+  animation: ripple-expand 0.55s linear forwards;
+  pointer-events: none;
+}
+@keyframes ripple-expand {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* ── 5. Skill bubbles spring bounce ── */
+.skill-bubble {
+  transition:
+    transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+.skill-bubble:hover {
+  transform: scale(1.08) translateY(-3px) !important;
+}
+
+/* ── 6. Nav link animated underline ── */
+.nav-links a {
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-highlight);
+  border-radius: 2px;
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (hover: hover) {
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+}
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ── 7. Theme toggle flip animation ── */
+@keyframes toggle-flip {
+  0%   { transform: rotateY(0deg)   scale(1.04); }
+  50%  { transform: rotateY(90deg)  scale(0.96); }
+  100% { transform: rotateY(0deg)   scale(1); }
+}
+.theme-toggle.is-flipping {
+  animation: toggle-flip 0.4s ease;
+}
+
+/* ── 8. Form input focus glow ── */
+#feedback-form input,
+#feedback-form textarea,
+#feedback-form select {
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+#feedback-form input:focus,
+#feedback-form textarea:focus,
+#feedback-form select:focus {
+  box-shadow: 0 0 0 3px rgba(27, 75, 138, 0.18), 0 2px 8px rgba(27, 75, 138, 0.1);
+  border-color: var(--color-primary);
+  outline: none;
+}
+body[data-theme="dark"] #feedback-form input:focus,
+body[data-theme="dark"] #feedback-form textarea:focus,
+body[data-theme="dark"] #feedback-form select:focus {
+  box-shadow: 0 0 0 3px rgba(91, 155, 213, 0.22);
+  border-color: var(--color-primary);
+}
+
+/* ── 9. Blog card image parallax ── */
+.blog-anim-wrap {
+  overflow: hidden;
+}
+.blog-anim {
+  transition: transform 0.12s ease-out;
+  will-change: transform;
+}
+
+/* ── 10. Bento card staggered entrance via --card-index ── */
+.bento-card.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: calc(var(--card-index, 0) * 0.08s);
+}
+.bento-card.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
